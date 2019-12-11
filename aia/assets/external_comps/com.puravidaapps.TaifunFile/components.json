@@ -1,0 +1,259 @@
+[{
+ "categoryString": "EXTENSION",
+ "nonVisible": "true",
+ "iconName": "https://puravidaapps.com/images/taifun16.png",
+ "methods": [
+  {
+   "deprecated": "false",
+   "name": "AvailableSize",
+   "description": "Return available size of given storage directory in Bytes. To get the value in KB, divide by 1024. To get the value in MB, divide by another 1024. To get the value in GB, divide by another 1024.",
+   "params": [{
+    "name": "storageDirectory",
+    "type": "text"
+   }],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "name": "AvailableStorageDirectories",
+   "description": "Return a list of available storage directories.",
+   "params": [],
+   "returnType": "any"
+  },
+  {
+   "deprecated": "false",
+   "name": "Copy",
+   "description": "Copy file. Use this method to copy small files, for large files use the CopyAsync method instead. Prefix the filename with / (i.e. relative path) to copy a file on the SD card. For instance /myFile.txt will copy the file /mnt/sdcard/myFile.txt. To copy assets packaged with an application (also works for the Companion) start the fromFilename with // (two slashes). However you can't copy files to the assets. If a fileName starts with file:/// you can specify a complete path to the file.",
+   "params": [
+    {
+     "name": "fromFileName",
+     "type": "text"
+    },
+    {
+     "name": "toFileName",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "CopyAsync",
+   "description": "Copy file (async). Use this method to copy large files. The copy process is finished after the Copied event fires.Prefix the filename with / (i.e. relative path) to copy a file on the SD card. For instance /myFile.txt will copy the file /mnt/sdcard/myFile.txt. To copy assets packaged with an application (also works for the Companion) start the fromFilename with // (two slashes). However you can't copy files to the assets. If a fileName starts with file:/// you can specify a complete path to the file.",
+   "params": [
+    {
+     "name": "fromFileName",
+     "type": "text"
+    },
+    {
+     "name": "toFileName",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "Delete",
+   "description": "Delete file. Prefix the filename with / (i.e. relative path) to delete a file on the SD card. For instance /myFile.txt will delete the file /mnt/sdcard/myFile.txt. You can't delete files stored in the assets! If a fileName starts with file:/// you can specify a complete path to the file.",
+   "params": [{
+    "name": "fileName",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "DirectoryList",
+   "description": "Return a list of subdirectories of a given directory. The complete path to these subdirectories is provided. If a directory starts with file:/// you can specify a complete path to the directory. The result list does NOT include subdirectories of subdirectories.",
+   "params": [{
+    "name": "directoryName",
+    "type": "text"
+   }],
+   "returnType": "any"
+  },
+  {
+   "deprecated": "false",
+   "name": "Exists",
+   "description": "Checks whether a file or directory exists.Prefix the filename with / (i.e. relative path) to look for the file  on the SD card. For instance /myFile.txt will look for the file /mnt/sdcard/myFile.txt. To read assets packaged with an application (also works for the Companion) start the filename with // (two slashes). If a fileOrDirectoryName starts with file:/// you can specify a complete path to the file of directory.",
+   "params": [{
+    "name": "fileOrDirectoryName",
+    "type": "text"
+   }],
+   "returnType": "boolean"
+  },
+  {
+   "deprecated": "false",
+   "name": "FileList",
+   "description": "Return a list of filenames of a given directory. Use this method for specific directories to get back a result immediately. To get a list for a complete device or sdcard, which may take a few seconds, use the FileListAsync method instead. The complete path to these files is provided. You can filter by extension. To get a list of all files, use * as extension.If a directory starts with file:/// you can specify a complete path to the directory. To include files of all subdirectories, set includeSubdirectories to true, else to false.",
+   "params": [
+    {
+     "name": "directoryName",
+     "type": "text"
+    },
+    {
+     "name": "extension",
+     "type": "text"
+    },
+    {
+     "name": "includeSubdirectories",
+     "type": "boolean"
+    }
+   ],
+   "returnType": "any"
+  },
+  {
+   "deprecated": "false",
+   "name": "FileListAsync",
+   "description": "Create a list of filenames of a given directory. The result will be provided in the AfterFileListAsync event. The complete path to these files is provided. You can filter by extension. To get a list of all files, use * as extension.If a directory starts with file:/// you can specify a complete path to the directory. To include files of all subdirectories, set includeSubdirectories to true, else to false.",
+   "params": [
+    {
+     "name": "directoryName",
+     "type": "text"
+    },
+    {
+     "name": "extension",
+     "type": "text"
+    },
+    {
+     "name": "includeSubdirectories",
+     "type": "boolean"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "FileListFromAssets",
+   "description": "Return a list of filenames from the assets (also works for the Companion). Note: during development, you will get all files stored in directory /AppInventor/assets.",
+   "params": [],
+   "returnType": "any"
+  },
+  {
+   "deprecated": "false",
+   "name": "GetFileName",
+   "description": "Get path and filename from media content uri",
+   "params": [{
+    "name": "contentUri",
+    "type": "text"
+   }],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "name": "GetUri",
+   "description": "Get content uri from filename",
+   "params": [{
+    "name": "filename",
+    "type": "text"
+   }],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "name": "IsDirectory",
+   "description": "Checks whether it is a file or directory.Prefix the filename with / (i.e. relative path) to look for the file  on the SD card. For instance /myFile.txt will look for the file /mnt/sdcard/myFile.txt. If fileOrDirectoryName starts with file:/// you can specify a complete path to the file or directory.",
+   "params": [{
+    "name": "fileOrDirectoryName",
+    "type": "text"
+   }],
+   "returnType": "boolean"
+  },
+  {
+   "deprecated": "false",
+   "name": "Length",
+   "description": "Return file length of a file.Prefix the filename with / (i.e. relative path) to look for the file  on the SD card. For instance /myFile.txt will look for the file /mnt/sdcard/myFile.txt. To read assets packaged with an application (also works for the Companion) start the filename with // (two slashes). If a fileName starts with file:/// you can specify a complete path to the file.",
+   "params": [{
+    "name": "fileName",
+    "type": "text"
+   }],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "name": "Move",
+   "description": "Move file. Use this method to move small files, for large files use the MoveAsync method instead.Prefix the filename with / (i.e. relative path) to move a file on the SD card. For instance /myFile.txt will move the file /mnt/sdcard/myFile.txt. You can't move files from or to the assets If a fileName starts with file:/// you can specify a complete path to the file.",
+   "params": [
+    {
+     "name": "fromFileName",
+     "type": "text"
+    },
+    {
+     "name": "toFileName",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "MoveAsync",
+   "description": "Move file. Use this method to move large files. The move process is finished after the Moved event fires.Prefix the filename with / (i.e. relative path) to move a file on the SD card. For instance /myFile.txt will move the file /mnt/sdcard/myFile.txt. You can't move files from or to the assets If a fileName starts with file:/// you can specify a complete path to the file.",
+   "params": [
+    {
+     "name": "fromFileName",
+     "type": "text"
+    },
+    {
+     "name": "toFileName",
+     "type": "text"
+    }
+   ]
+  }
+ ],
+ "blockProperties": [{
+  "rw": "read-write",
+  "deprecated": "false",
+  "name": "SuppressWarnings",
+  "description": "whether Warnings should be suppressed",
+  "type": "boolean"
+ }],
+ "helpUrl": "https://puravidaapps.com/file.php",
+ "type": "com.puravidaapps.TaifunFile",
+ "version": "8",
+ "external": "true",
+ "showOnPalette": "true",
+ "name": "TaifunFile",
+ "helpString": "Extension related to the file component. Version 9 as of 2017-09-10 for App Inventor version nb162 and Companion version 2.44.",
+ "properties": [{
+  "defaultValue": "false",
+  "name": "SuppressWarnings",
+  "editorType": "boolean"
+ }],
+ "events": [
+  {
+   "deprecated": "false",
+   "name": "AfterFileListAsync",
+   "description": "Event indicating that creating a list of files of a given directory has finished.",
+   "params": [{
+    "name": "fileList",
+    "type": "any"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "Copied",
+   "description": "Event indicating that copying a file has finished.",
+   "params": [
+    {
+     "name": "successful",
+     "type": "boolean"
+    },
+    {
+     "name": "response",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "Moved",
+   "description": "Event indicating that moving a file has finished.",
+   "params": [
+    {
+     "name": "successful",
+     "type": "boolean"
+    },
+    {
+     "name": "response",
+     "type": "text"
+    }
+   ]
+  }
+ ]
+}]
