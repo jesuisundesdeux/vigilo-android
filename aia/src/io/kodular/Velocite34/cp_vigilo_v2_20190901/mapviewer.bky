@@ -1,0 +1,263 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="global_declaration" id="et+tQVIfr%gTZzZU=PQ(" x="-650" y="-390">
+    <field name="NAME">layer</field>
+    <value name="VALUE">
+      <block type="text" id="E01?P#e:8plmQen[V2gJ">
+        <field name="TEXT">normal</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="r/sUwf?}SmK%}uyvx-Kl" x="-650" y="-330">
+    <mutation component_type="GoogleMap" is_generic="false" instance_name="Google_Maps1" event_name="MapIsReady"></mutation>
+    <field name="COMPONENT_SELECTOR">Google_Maps1</field>
+    <statement name="DO">
+      <block type="component_method" id="^(t,re-3e@MP/:kbi+bg">
+        <mutation component_type="GoogleMap" method_name="EnableZoomControl" is_generic="false" instance_name="Google_Maps1"></mutation>
+        <field name="COMPONENT_SELECTOR">Google_Maps1</field>
+        <value name="ARG0">
+          <block type="logic_boolean" id="Mq3f#,I8,`-p!Z}]hGlh">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="Rd:/FDnL7USpNTG0E-?A">
+            <mutation component_type="GoogleMap" method_name="EnableScroll" is_generic="false" instance_name="Google_Maps1"></mutation>
+            <field name="COMPONENT_SELECTOR">Google_Maps1</field>
+            <value name="ARG0">
+              <block type="logic_boolean" id="h%qI}OJK@j2zQ5%TyHyx">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="GM29I/DdzdiXZXZ;o[tr">
+                <mutation component_type="GoogleMap" method_name="MoveCamera" is_generic="false" instance_name="Google_Maps1"></mutation>
+                <field name="COMPONENT_SELECTOR">Google_Maps1</field>
+                <value name="ARG0">
+                  <block type="lists_lookup_in_pairs" id="X?)!O_9Kno{4FN:X[D}V">
+                    <value name="KEY">
+                      <block type="text" id="?6@AZJa0mWd7t8=Hphz,">
+                        <field name="TEXT">lat</field>
+                      </block>
+                    </value>
+                    <value name="LIST">
+                      <block type="controls_getStartValue" id="g!g]H~QK,|mmn+cWI:qD"></block>
+                    </value>
+                    <value name="NOTFOUND">
+                      <block type="text" id="`HkT)(.m$^_4(ztD=*K:">
+                        <field name="TEXT">not found</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="lists_lookup_in_pairs" id="}`;]*B:8!M+;jx)n5=5Y">
+                    <value name="KEY">
+                      <block type="text" id="-u[PcsE{3#^enbQ}4GSG">
+                        <field name="TEXT">lon</field>
+                      </block>
+                    </value>
+                    <value name="LIST">
+                      <block type="controls_getStartValue" id="C@Pj|7b]%v[)U#Ea*(Iu"></block>
+                    </value>
+                    <value name="NOTFOUND">
+                      <block type="text" id="[rEj}Y;3yKDbGttcZ1Mj">
+                        <field name="TEXT">not found</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="ARG2">
+                  <block type="lists_lookup_in_pairs" id="BV`A-`]fou[LXv4deaZ8">
+                    <value name="KEY">
+                      <block type="text" id="^uU91gfKmyebTfo`.le2">
+                        <field name="TEXT">zoom</field>
+                      </block>
+                    </value>
+                    <value name="LIST">
+                      <block type="controls_getStartValue" id=";tROWHA7Bh*=6zFvU+Q_"></block>
+                    </value>
+                    <value name="NOTFOUND">
+                      <block type="text" id="Ng`NOk6f@,KGs?VOmWm}">
+                        <field name="TEXT">not found</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="L;uQWsI2|vAhYJgY#-=`">
+                    <mutation component_type="GoogleMap" method_name="AddMarkersFromJson" is_generic="false" instance_name="Google_Maps1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Google_Maps1</field>
+                    <value name="ARG0">
+                      <block type="text_join" id="GDg`?*PXo2DcfHd/O=46">
+                        <mutation items="5"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="$q8w1|/$+RO:EU1|,UMh">
+                            <field name="TEXT">[{lat:</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="lists_lookup_in_pairs" id=",!vOp3@1KW_]=:n_ciJ!">
+                            <value name="KEY">
+                              <block type="text" id="vO%w5qV~~Afj2$xux100">
+                                <field name="TEXT">lat</field>
+                              </block>
+                            </value>
+                            <value name="LIST">
+                              <block type="controls_getStartValue" id="8:w]yt%`+3DIc+S/inS8"></block>
+                            </value>
+                            <value name="NOTFOUND">
+                              <block type="text" id=".AsK}Q:492jOY~/ygdKB">
+                                <field name="TEXT">not found</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="text" id="mc(d0ja^~~b3^Ed3i{$F">
+                            <field name="TEXT">, lng: </field>
+                          </block>
+                        </value>
+                        <value name="ADD3">
+                          <block type="lists_lookup_in_pairs" id="uJo~{*h!4!:JTHWkR}[F">
+                            <value name="KEY">
+                              <block type="text" id="Ts75mR9z[RM6M.Th[RX1">
+                                <field name="TEXT">lon</field>
+                              </block>
+                            </value>
+                            <value name="LIST">
+                              <block type="controls_getStartValue" id="-[VywP_Kbvd{e8uh1v,X"></block>
+                            </value>
+                            <value name="NOTFOUND">
+                              <block type="text" id=",9L[7~}uCxV-(ih9]l$0">
+                                <field name="TEXT">not found</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD4">
+                          <block type="text" id="uBKYlAP-v)bU1t$FFE%;">
+                            <field name="TEXT">, color: 1, title: "Position observation"}]</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="`6~1U~6g~/7pY-m:b)kO" x="-650" y="350">
+    <mutation component_type="MakeroidFab" is_generic="false" instance_name="ab_maptype" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">ab_maptype</field>
+    <statement name="DO">
+      <block type="controls_if" id="Oj{i~h3f`%369(rdUtwL">
+        <mutation elseif="1" else="1"></mutation>
+        <value name="IF0">
+          <block type="text_compare" id="J|M(}pWCwvIsFy4rV{z)">
+            <field name="OP">EQUAL</field>
+            <value name="TEXT1">
+              <block type="lexical_variable_get" id="Yk9r|e3.=H=^XEQb0.VW">
+                <field name="VAR">global layer</field>
+              </block>
+            </value>
+            <value name="TEXT2">
+              <block type="text" id="@;}E`aKQlW((cVGGT{S|">
+                <field name="TEXT">normal</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="lexical_variable_set" id="G7=#eAV7A:so{7.KrnRN">
+            <field name="VAR">global layer</field>
+            <value name="VALUE">
+              <block type="text" id="=Jg7.gS@!X]EzQO3d%_y">
+                <field name="TEXT">hybrid</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="?fZ.yC[toReGREY_Hvi)">
+                <mutation component_type="GoogleMap" method_name="SetMapType" is_generic="false" instance_name="Google_Maps1"></mutation>
+                <field name="COMPONENT_SELECTOR">Google_Maps1</field>
+                <value name="ARG0">
+                  <block type="lexical_variable_get" id="xfxne7A|qbhxn[oCAves">
+                    <field name="VAR">global layer</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="text_compare" id="~W,[u#XHw_M0IcHtYBE:">
+            <field name="OP">EQUAL</field>
+            <value name="TEXT1">
+              <block type="lexical_variable_get" id="`_|GSkdkvcN0L]f@575s">
+                <field name="VAR">global layer</field>
+              </block>
+            </value>
+            <value name="TEXT2">
+              <block type="text" id="/t+1C-!NK[S8ygq=N`L^">
+                <field name="TEXT">hybrid</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="lexical_variable_set" id="{Jp57dF`=fIgcIb(RQtE">
+            <field name="VAR">global layer</field>
+            <value name="VALUE">
+              <block type="text" id="Y|vS|op^][y`pN=v-cJi">
+                <field name="TEXT">satellite</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="P1{J=kk6*)iT@SZ/G!52">
+                <mutation component_type="GoogleMap" method_name="SetMapType" is_generic="false" instance_name="Google_Maps1"></mutation>
+                <field name="COMPONENT_SELECTOR">Google_Maps1</field>
+                <value name="ARG0">
+                  <block type="lexical_variable_get" id="7@U6#)$3yQg*xydDWPzo">
+                    <field name="VAR">global layer</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="lexical_variable_set" id="l{!=k[s/P#:,`ew[1x~G">
+            <field name="VAR">global layer</field>
+            <value name="VALUE">
+              <block type="text" id="s`x!=F*{:X:3fmcFO2tH">
+                <field name="TEXT">normal</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="B9.A#4Wh*jY4v?x%W?O-">
+                <mutation component_type="GoogleMap" method_name="SetMapType" is_generic="false" instance_name="Google_Maps1"></mutation>
+                <field name="COMPONENT_SELECTOR">Google_Maps1</field>
+                <value name="ARG0">
+                  <block type="lexical_variable_get" id="qvg4NQB@fr=FtE]0x2Oh">
+                    <field name="VAR">global layer</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="opB#AU.`hzfc~p!=i_a)" x="-630" y="750">
+    <mutation component_type="Form" is_generic="false" instance_name="mapviewer" event_name="BackPressed"></mutation>
+    <field name="COMPONENT_SELECTOR">mapviewer</field>
+    <statement name="DO">
+      <block type="controls_closeScreen" id="[!2Egs%TyDgH~@E.n)EQ"></block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="212" language-version="27"></yacodeblocks>
+</xml>
