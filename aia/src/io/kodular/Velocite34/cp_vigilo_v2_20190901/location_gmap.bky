@@ -150,6 +150,62 @@
                     </value>
                   </block>
                 </statement>
+                <next>
+                  <block type="controls_if" id="s3eEX!!6.M]=,_$`Q$Jq">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="text_compare" id="NG1qu#GRSz(rYwlhvxSB">
+                        <field name="OP">EQUAL</field>
+                        <value name="TEXT1">
+                          <block type="lists_lookup_in_pairs" id="PdICZ-tP`Kc#+M{Z[o_Y">
+                            <value name="KEY">
+                              <block type="text" id="+=XXW^qEbon]9pE)K]rS">
+                                <field name="TEXT">imagetype</field>
+                              </block>
+                            </value>
+                            <value name="LIST">
+                              <block type="controls_getStartValue" id="yi=qcU{jnopdsY)FN1YZ"></block>
+                            </value>
+                            <value name="NOTFOUND">
+                              <block type="text" id="R4=,mP!~iOy}r:(f~e9i">
+                                <field name="TEXT">obs</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="TEXT2">
+                          <block type="text" id="/Fr|0E2rwHa!m[|[;h}i">
+                            <field name="TEXT">resolution</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="component_set_get" id="]V*bt~[,=cF%yj~*A-_U">
+                        <mutation component_type="Form" set_or_get="set" property_name="Title" is_generic="false" instance_name="location_gmap"></mutation>
+                        <field name="COMPONENT_SELECTOR">location_gmap</field>
+                        <field name="PROP">Title</field>
+                        <value name="VALUE">
+                          <block type="text" id="K=$Y3jomGnXy*al(O6Bl">
+                            <field name="TEXT">Ajout d'une résolution</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="component_set_get" id="fD6hA^U7o3N{U=n~(*7A">
+                        <mutation component_type="Form" set_or_get="set" property_name="Title" is_generic="false" instance_name="location_gmap"></mutation>
+                        <field name="COMPONENT_SELECTOR">location_gmap</field>
+                        <field name="PROP">Title</field>
+                        <value name="VALUE">
+                          <block type="text" id="(q=Id]]pLScJm@beOC9,">
+                            <field name="TEXT">Ajout d'une observation</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
@@ -4049,5 +4105,5 @@
       </block>
     </value>
   </block>
-  <yacodeblocks ya-version="212" language-version="27"></yacodeblocks>
+  <yacodeblocks ya-version="220" language-version="27"></yacodeblocks>
 </xml>
