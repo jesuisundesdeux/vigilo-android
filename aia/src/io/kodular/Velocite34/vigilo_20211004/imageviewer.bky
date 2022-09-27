@@ -1,0 +1,67 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="df?ufO#IgBu@w]:.g@^I" x="-490" y="-690">
+    <mutation component_type="Form" is_generic="false" instance_name="imageviewer" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">imageviewer</field>
+    <statement name="DO">
+      <block type="component_method" id="$57eS;.2.=-n6w*Grl3~" disabled="true">
+        <mutation component_type="Form" method_name="AskForPermission" is_generic="false" instance_name="imageviewer"></mutation>
+        <field name="COMPONENT_SELECTOR">imageviewer</field>
+        <value name="ARG0">
+          <block type="helpers_dropdown" id="M)HPa|,nQY0zc6ayR4on">
+            <mutation key="Permission"></mutation>
+            <field name="OPTION">ReadExternalStorage</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="J?lsj*KA7F}Yb.1B00e2">
+            <mutation component_type="ImageViewer" method_name="Create" is_generic="false" instance_name="ImageViewer1"></mutation>
+            <field name="COMPONENT_SELECTOR">ImageViewer1</field>
+            <value name="ARG0">
+              <block type="component_component_block" id="8mMM~K0MGK0o9,OH3iyf">
+                <mutation component_type="VerticalArrangement" instance_name="Vertical_Arrangement1"></mutation>
+                <field name="COMPONENT_SELECTOR">Vertical_Arrangement1</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="controls_getStartValue" id=".d3OJt-5oc1CyqA|0;oO"></block>
+            </value>
+            <next>
+              <block type="component_set_get" id="BQ{/DU-O=wI)8=+H,Sn1">
+                <mutation component_type="ImageViewer" set_or_get="set" property_name="ScaleType" is_generic="false" instance_name="ImageViewer1"></mutation>
+                <field name="COMPONENT_SELECTOR">ImageViewer1</field>
+                <field name="PROP">ScaleType</field>
+                <value name="VALUE">
+                  <block type="component_set_get" id="*7q:eBYXL85%AD|X,9OG">
+                    <mutation component_type="ImageViewer" set_or_get="get" property_name="FitCenter" is_generic="false" instance_name="ImageViewer1"></mutation>
+                    <field name="COMPONENT_SELECTOR">ImageViewer1</field>
+                    <field name="PROP">FitCenter</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_set_get" id="kenQ!Yh(jaE[(cXIiAz.">
+                    <mutation component_type="ImageViewer" set_or_get="set" property_name="Zoomable" is_generic="false" instance_name="ImageViewer1"></mutation>
+                    <field name="COMPONENT_SELECTOR">ImageViewer1</field>
+                    <field name="PROP">Zoomable</field>
+                    <value name="VALUE">
+                      <block type="logic_boolean" id="uq9EXT!+n`^NI?W0O2M6">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id=";%yl+yVMg4t?GBhG4hxA" x="-470" y="-430">
+    <mutation component_type="Form" is_generic="false" instance_name="imageviewer" event_name="BackPressed"></mutation>
+    <field name="COMPONENT_SELECTOR">imageviewer</field>
+    <statement name="DO">
+      <block type="controls_closeScreen" id="KEW(!|.6^rUa[t@vKvm8"></block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="241" language-version="34"></yacodeblocks>
+</xml>

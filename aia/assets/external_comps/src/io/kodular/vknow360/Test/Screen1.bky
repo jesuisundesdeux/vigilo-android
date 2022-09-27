@@ -1,0 +1,652 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="w:$=ux4`?}M+I)#++rqW" x="-1590" y="810">
+    <mutation component_type="Form" is_generic="false" instance_name="Screen1" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">Screen1</field>
+    <statement name="DO">
+      <block type="component_method" id="$)[cYvn^L2KBO%1f7@-{">
+        <mutation component_type="MakeroidListViewImageText" method_name="AddItem" is_generic="false" instance_name="List_View_Image_and_Text1"></mutation>
+        <field name="COMPONENT_SELECTOR">List_View_Image_and_Text1</field>
+        <value name="ARG0">
+          <block type="text" id="dwbuTyJQO`_OfB+a@GMS">
+            <field name="TEXT">sunnythedeveloper.png</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="|;~h?jPB(3_4r^SjS!p1">
+            <field name="TEXT">FileTools extension</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="]haUtI)h@*Z^sv(WWR06">
+            <field name="TEXT">Developed by Sunny Gupta</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="ZB!jU;FTLceLjzx#Xk*i" x="-1630" y="1010">
+    <mutation component_type="MakeroidListViewImageText" is_generic="false" instance_name="List_View_Image_and_Text1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">List_View_Image_and_Text1</field>
+    <statement name="DO">
+      <block type="component_method" id="+pr,1b8{N.uYHPn!!aIW">
+        <mutation component_type="ActivityStarter" method_name="StartActivity" is_generic="false" instance_name="Activity_Starter1"></mutation>
+        <field name="COMPONENT_SELECTOR">Activity_Starter1</field>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="eewq8LK=m3Q_09[tMgNq" x="-1190" y="990">
+    <mutation component_type="Button" is_generic="false" instance_name="C_M" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">C_M</field>
+    <statement name="DO">
+      <block type="component_method" id="2YtT*kO2pF3Lhd=~W;B$">
+        <mutation component_type="FileTools" method_name="CopyFile" is_generic="false" instance_name="FileTools1"></mutation>
+        <field name="COMPONENT_SELECTOR">FileTools1</field>
+        <value name="ARG0">
+          <block type="component_set_get" id="MppNA8y/_IfZg{?ChW,f">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+            <field name="COMPONENT_SELECTOR">Text_Box2</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="component_set_get" id="!6W|~]DReDn*@99.JJ8?">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box3"></mutation>
+            <field name="COMPONENT_SELECTOR">Text_Box3</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="?AWSJwWoF0Ifh0LhkT!Y" x="-390" y="990">
+    <mutation component_type="FileTools" is_generic="false" instance_name="FileTools1" event_name="DirectoryCreated"></mutation>
+    <field name="COMPONENT_SELECTOR">FileTools1</field>
+    <statement name="DO">
+      <block type="component_set_get" id=",.9CHaDhA_AXxv|$oN1B">
+        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+        <field name="COMPONENT_SELECTOR">Label2</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="lexical_variable_get" id="=%CBvj^F@+Fy4;xk:#/-">
+            <mutation>
+              <eventparam name="IsDirectoryCreated"></eventparam>
+            </mutation>
+            <field name="VAR">IsDirectoryCreated</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="@YZjp.OhtIz]iyfFqQ}h" x="170" y="990">
+    <mutation component_type="FileTools" is_generic="false" instance_name="FileTools1" event_name="FileMoved"></mutation>
+    <field name="COMPONENT_SELECTOR">FileTools1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="uLRE!P*}_csV@~48UTDB">
+        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+        <field name="COMPONENT_SELECTOR">Label2</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="lexical_variable_get" id="wT|(L#bG=s{z@bC)eEti">
+            <mutation>
+              <eventparam name="successful"></eventparam>
+            </mutation>
+            <field name="VAR">successful</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="XSJP`e@5oppn=EEXGPw," x="850" y="990">
+    <mutation component_type="Button" is_generic="false" instance_name="Create_dir" event_name="LongClick"></mutation>
+    <field name="COMPONENT_SELECTOR">Create_dir</field>
+    <statement name="DO">
+      <block type="component_method" id="8YujwV294ypEO|M[jPeV">
+        <mutation component_type="FileTools" method_name="CreateApplicationSpecificDirectory" is_generic="false" instance_name="FileTools1"></mutation>
+        <field name="COMPONENT_SELECTOR">FileTools1</field>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="Fw,FV^@C;~aB=`h1JBP." x="-1190" y="1130">
+    <mutation component_type="Button" is_generic="false" instance_name="C_M" event_name="LongClick"></mutation>
+    <field name="COMPONENT_SELECTOR">C_M</field>
+    <statement name="DO">
+      <block type="component_method" id="g#??H$j?2tMQK5dbbY!^">
+        <mutation component_type="FileTools" method_name="MoveFile" is_generic="false" instance_name="FileTools1"></mutation>
+        <field name="COMPONENT_SELECTOR">FileTools1</field>
+        <value name="ARG0">
+          <block type="component_set_get" id="o@d+i3sQ+q|^vRJuGMZ5">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+            <field name="COMPONENT_SELECTOR">Text_Box2</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="component_set_get" id="}R^h?],8}1C~jub-E)n8">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box3"></mutation>
+            <field name="COMPONENT_SELECTOR">Text_Box3</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="].~5:FA?!.Us5jD[,*JV" x="1770" y="990">
+    <mutation component_type="Button" is_generic="false" instance_name="rename_specs" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">rename_specs</field>
+    <statement name="DO">
+      <block type="component_method" id="`eCgL=A5},34;zl94i7;">
+        <mutation component_type="FileTools" method_name="RenameFile" is_generic="false" instance_name="FileTools1"></mutation>
+        <field name="COMPONENT_SELECTOR">FileTools1</field>
+        <value name="ARG0">
+          <block type="component_set_get" id="a+uaO{{/mryzpn,d/%4-">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+            <field name="COMPONENT_SELECTOR">Text_Box2</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="component_set_get" id="9L~ai,9$PPeRo)WrM_#r">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box3"></mutation>
+            <field name="COMPONENT_SELECTOR">Text_Box3</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="/bo6bYZ38/8q]kCm]}(3" x="-390" y="1110">
+    <mutation component_type="Button" is_generic="false" instance_name="FilesList" event_name="LongClick"></mutation>
+    <field name="COMPONENT_SELECTOR">FilesList</field>
+    <statement name="DO">
+      <block type="component_method" id="|3]Qm^s4!;K@){t`a1(E">
+        <mutation component_type="FileTools" method_name="FileListAsync" is_generic="false" instance_name="FileTools1"></mutation>
+        <field name="COMPONENT_SELECTOR">FileTools1</field>
+        <value name="ARG0">
+          <block type="component_set_get" id="yAHXYL3#{qrH{:!d/42I">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+            <field name="COMPONENT_SELECTOR">Text_Box2</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="component_set_get" id="Ggwfi=WtCo,jAVj$9u!N">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box3"></mutation>
+            <field name="COMPONENT_SELECTOR">Text_Box3</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="component_set_get" id="#cpDw{?NH}uLmy2l4FlH">
+            <mutation component_type="SwitchToggle" set_or_get="get" property_name="isChecked" is_generic="false" instance_name="include_folders"></mutation>
+            <field name="COMPONENT_SELECTOR">include_folders</field>
+            <field name="PROP">isChecked</field>
+          </block>
+        </value>
+        <value name="ARG3">
+          <block type="component_set_get" id=".v{U3`90Y:CN)Uw@*-!^">
+            <mutation component_type="SwitchToggle" set_or_get="get" property_name="isChecked" is_generic="false" instance_name="recursive"></mutation>
+            <field name="COMPONENT_SELECTOR">recursive</field>
+            <field name="PROP">isChecked</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="FnZDOMNG~!JTwL_tC%)$" x="170" y="1110">
+    <mutation component_type="FileTools" is_generic="false" instance_name="FileTools1" event_name="FileCopied"></mutation>
+    <field name="COMPONENT_SELECTOR">FileTools1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="Fi:|gF[Iyhz`MgRIAhp5">
+        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+        <field name="COMPONENT_SELECTOR">Label2</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="lexical_variable_get" id="Gv9~C;hSB7,@PKX|8x(V">
+            <mutation>
+              <eventparam name="successful"></eventparam>
+            </mutation>
+            <field name="VAR">successful</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="_at,t-u4#blWwhG0%9jC" x="850" y="1090">
+    <mutation component_type="Button" is_generic="false" instance_name="Create_dir" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Create_dir</field>
+    <statement name="DO">
+      <block type="component_method" id="c{;jWwZM4r?lp?=/i~Yi">
+        <mutation component_type="FileTools" method_name="CreateDirectory" is_generic="false" instance_name="FileTools1"></mutation>
+        <field name="COMPONENT_SELECTOR">FileTools1</field>
+        <value name="ARG0">
+          <block type="component_set_get" id="n|L(42z5K!/AtPlKpkqZ">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+            <field name="COMPONENT_SELECTOR">Text_Box2</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="lKMU|[*%m#6o2J|y#aPM" x="-1090" y="1270">
+    <mutation component_type="Button" is_generic="false" instance_name="FilesList" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">FilesList</field>
+    <statement name="DO">
+      <block type="component_set_get" id="W%|oxT9G1ap2G*xh!m_z">
+        <mutation component_type="ListView" set_or_get="set" property_name="Elements" is_generic="false" instance_name="List_View1"></mutation>
+        <field name="COMPONENT_SELECTOR">List_View1</field>
+        <field name="PROP">Elements</field>
+        <value name="VALUE">
+          <block type="component_method" id="FK^ML7}ho`;9ycr;veV^">
+            <mutation component_type="FileTools" method_name="FilesList" is_generic="false" instance_name="FileTools1"></mutation>
+            <field name="COMPONENT_SELECTOR">FileTools1</field>
+            <value name="ARG0">
+              <block type="component_set_get" id="]cl-WQiu;vCtzxM2jnDl">
+                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+                <field name="COMPONENT_SELECTOR">Text_Box2</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="component_set_get" id="49A=P@v2ux^[*AL$H3m%">
+                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box3"></mutation>
+                <field name="COMPONENT_SELECTOR">Text_Box3</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block type="component_set_get" id="k)f8H+Sj6^pw8DgjZW#2">
+                <mutation component_type="SwitchToggle" set_or_get="get" property_name="isChecked" is_generic="false" instance_name="include_folders"></mutation>
+                <field name="COMPONENT_SELECTOR">include_folders</field>
+                <field name="PROP">isChecked</field>
+              </block>
+            </value>
+            <value name="ARG3">
+              <block type="component_set_get" id="E[BHX^dcn_W1,C1+Av$:">
+                <mutation component_type="SwitchToggle" set_or_get="get" property_name="isChecked" is_generic="false" instance_name="recursive"></mutation>
+                <field name="COMPONENT_SELECTOR">recursive</field>
+                <field name="PROP">isChecked</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="L/[X%L2=;$sYTg,Q!Tvv" x="1770" y="1130">
+    <mutation component_type="Button" is_generic="false" instance_name="rename_specs" event_name="LongClick"></mutation>
+    <field name="COMPONENT_SELECTOR">rename_specs</field>
+    <statement name="DO">
+      <block type="component_set_get" id="-=6yEQZR5YFlcGyPrwOP">
+        <mutation component_type="ListView" set_or_get="set" property_name="Elements" is_generic="false" instance_name="List_View1"></mutation>
+        <field name="COMPONENT_SELECTOR">List_View1</field>
+        <field name="PROP">Elements</field>
+        <value name="VALUE">
+          <block type="lists_create_with" id="0G8=L36PP,AmP9m((9)w">
+            <mutation items="3"></mutation>
+            <value name="ADD0">
+              <block type="component_method" id="a5y8Um^BT6C_sx)-|Pk|">
+                <mutation component_type="FileTools" method_name="FreeSpace" is_generic="false" instance_name="FileTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">FileTools1</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="xVZk[Ng$!awc/C-h(PXY">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box2</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="component_method" id="nCLdP;dY9|6/3YPK~=z5">
+                <mutation component_type="FileTools" method_name="TotalSpace" is_generic="false" instance_name="FileTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">FileTools1</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="r}%95F#l|$FLnGs/{k`^">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box2</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="component_method" id="l3Slja^ZN|r@;)s3_xw=">
+                <mutation component_type="FileTools" method_name="ApplicationSpecificDirectory" is_generic="false" instance_name="FileTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">FileTools1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="gHbW@9RZLAq|Ro$:7l+$" x="170" y="1230">
+    <mutation component_type="Button" is_generic="false" instance_name="available_dirs" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">available_dirs</field>
+    <statement name="DO">
+      <block type="component_set_get" id="K(#=+-^9:SkOoX;96|W?">
+        <mutation component_type="ListView" set_or_get="set" property_name="Elements" is_generic="false" instance_name="List_View1"></mutation>
+        <field name="COMPONENT_SELECTOR">List_View1</field>
+        <field name="PROP">Elements</field>
+        <value name="VALUE">
+          <block type="component_method" id="Qw1h$+)iM$(j$na@Q;Fx">
+            <mutation component_type="FileTools" method_name="AvailableStorageDirectories" is_generic="false" instance_name="FileTools1"></mutation>
+            <field name="COMPONENT_SELECTOR">FileTools1</field>
+            <comment pinned="false" h="80" w="160">Do It Result: (/storage/emulated/0)
+---
+            </comment>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="10TI~cE-w=1fX?$iELj5" x="750" y="1230">
+    <mutation component_type="Button" is_generic="false" instance_name="details" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">details</field>
+    <statement name="DO">
+      <block type="component_set_get" id="halv]LwO-~W%Hf7nIBFt">
+        <mutation component_type="ListView" set_or_get="set" property_name="Elements" is_generic="false" instance_name="List_View1"></mutation>
+        <field name="COMPONENT_SELECTOR">List_View1</field>
+        <field name="PROP">Elements</field>
+        <value name="VALUE">
+          <block type="lists_create_with" id="=UU;(I:9IylwcVr+l`_V">
+            <mutation items="12"></mutation>
+            <value name="ADD0">
+              <block type="component_method" id="1D[EI~h.MEFvtT?3~MnH">
+                <mutation component_type="FileTools" method_name="Exists" is_generic="false" instance_name="FileTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">FileTools1</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="CcO^m_P4g%(x+y]}J=00">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box2</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="component_method" id="CY*[1cY@|K(}$/8BtKKm">
+                <mutation component_type="FileTools" method_name="FileOrFolderSize" is_generic="false" instance_name="FileTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">FileTools1</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="p7;zM?PbLH7_?c).:@ZZ">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box2</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="component_method" id="fo,kT~8zVlSP;4vpzU1x">
+                <mutation component_type="FileTools" method_name="GetContentUri" is_generic="false" instance_name="FileTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">FileTools1</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="AmD#)PFU#POBQZ|I9t-o">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box2</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD3">
+              <block type="component_method" id="(,VfiVdZi41H}6)sJ+:3">
+                <mutation component_type="FileTools" method_name="PathFromUri" is_generic="false" instance_name="FileTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">FileTools1</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="6s1HvR5#SPDodg9d(8,-">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box3"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box3</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD4">
+              <block type="component_method" id="b56+%)!FMoR{uHY2DxR^">
+                <mutation component_type="FileTools" method_name="IsAbsolute" is_generic="false" instance_name="FileTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">FileTools1</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="sH=8-+QhAeP7Ie.j}zVx">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box2</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD5">
+              <block type="component_method" id="$V#%,v_!*gk$buWbt$ff">
+                <mutation component_type="FileTools" method_name="IsExecutable" is_generic="false" instance_name="FileTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">FileTools1</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="o%8,C:K@hu]fREt=fQ_s">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box2</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD6">
+              <block type="component_method" id="P)BfkY!tsIYe;1az;+`m">
+                <mutation component_type="FileTools" method_name="IsFile" is_generic="false" instance_name="FileTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">FileTools1</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="^ON2AY?%QrFX.VZWn+mG">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box2</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD7">
+              <block type="component_method" id="^W=7eI.D$|#[NvNN*#`M">
+                <mutation component_type="FileTools" method_name="IsHidden" is_generic="false" instance_name="FileTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">FileTools1</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="Y5B?#End/O`gQY.eoPej">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box2</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD8">
+              <block type="component_method" id=";Hs2;ORIrG@]LTeSIjhI">
+                <mutation component_type="FileTools" method_name="IsReadable" is_generic="false" instance_name="FileTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">FileTools1</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="17U|sO}#rLytp?qLW/bX">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box2</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD9">
+              <block type="component_method" id="X$@Rx:)IhSycBI$cC1h)">
+                <mutation component_type="FileTools" method_name="IsWritable" is_generic="false" instance_name="FileTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">FileTools1</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="jqG^]xY)ZD2M-*:-Uvr^">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box2</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD10">
+              <block type="component_method" id="i@Q+1/3Lss@z1@6ND9}m">
+                <mutation component_type="FileTools" method_name="LastModTime" is_generic="false" instance_name="FileTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">FileTools1</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="QF:dLqI:x7S~kUA_48ST">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box2</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="jT9YsBfJaftDqm_kBzEJ">
+                    <field name="TEXT">dd/MM/yyyy hh:mm:ss a</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="ADD11">
+              <block type="component_method" id="hbBW5*t}|5GNmd0T%5[I">
+                <mutation component_type="FileTools" method_name="MimeType" is_generic="false" instance_name="FileTools1"></mutation>
+                <field name="COMPONENT_SELECTOR">FileTools1</field>
+                <value name="ARG0">
+                  <block type="component_set_get" id="f!oig7ab]4f~[:pNw=^2">
+                    <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+                    <field name="COMPONENT_SELECTOR">Text_Box2</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="-|XKeHg%j^E)Tu8Bam]h" x="-390" y="1310">
+    <mutation component_type="Button" is_generic="false" instance_name="C_M_Asyn" event_name="LongClick"></mutation>
+    <field name="COMPONENT_SELECTOR">C_M_Asyn</field>
+    <statement name="DO">
+      <block type="component_method" id="~vjc+!P%RE7ZN[W[O}Do">
+        <mutation component_type="FileTools" method_name="MoveFileAsync" is_generic="false" instance_name="FileTools1"></mutation>
+        <field name="COMPONENT_SELECTOR">FileTools1</field>
+        <value name="ARG0">
+          <block type="component_set_get" id="FXFeM$M:{C]%;co^Rn`!">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+            <field name="COMPONENT_SELECTOR">Text_Box2</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="component_set_get" id="IWFsT@1.DPj$nv10d{Bf">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box3"></mutation>
+            <field name="COMPONENT_SELECTOR">Text_Box3</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="$;d%+FvJ=d-4p6Dr1g]X" x="170" y="1330">
+    <mutation component_type="FileTools" is_generic="false" instance_name="FileTools1" event_name="FileOrFolderDeleted"></mutation>
+    <field name="COMPONENT_SELECTOR">FileTools1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="u`@+Xm98IVkrciLk^o[f">
+        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label2"></mutation>
+        <field name="COMPONENT_SELECTOR">Label2</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="lexical_variable_get" id=",:#!Tob6])+kyU;}YJ_V">
+            <mutation>
+              <eventparam name="success"></eventparam>
+            </mutation>
+            <field name="VAR">success</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="RoFB8GpuG0^0sRuS+9Gs" x="-1190" y="1470">
+    <mutation component_type="Button" is_generic="false" instance_name="C_M_Asyn" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">C_M_Asyn</field>
+    <statement name="DO">
+      <block type="component_method" id="xCRjGI`2hMeM,[i/=*$I">
+        <mutation component_type="FileTools" method_name="CopyFileAsync" is_generic="false" instance_name="FileTools1"></mutation>
+        <field name="COMPONENT_SELECTOR">FileTools1</field>
+        <value name="ARG0">
+          <block type="component_set_get" id="OUs9]Cc7{MwtW+Jg5~pu">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+            <field name="COMPONENT_SELECTOR">Text_Box2</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="component_set_get" id="1H-3b+tbUnWpeB4GZYAn">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box3"></mutation>
+            <field name="COMPONENT_SELECTOR">Text_Box3</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="HDtiMjXy)Y|-Q7Um(W4r" x="-390" y="1450">
+    <mutation component_type="FileTools" is_generic="false" instance_name="FileTools1" event_name="GotFileList"></mutation>
+    <field name="COMPONENT_SELECTOR">FileTools1</field>
+    <statement name="DO">
+      <block type="component_set_get" id="r#d58^T}{hs6+..*6e|,">
+        <mutation component_type="ListView" set_or_get="set" property_name="Elements" is_generic="false" instance_name="List_View1"></mutation>
+        <field name="COMPONENT_SELECTOR">List_View1</field>
+        <field name="PROP">Elements</field>
+        <value name="VALUE">
+          <block type="lexical_variable_get" id="Zwofk*#w.$#VKcn*/?mC">
+            <mutation>
+              <eventparam name="filesList"></eventparam>
+            </mutation>
+            <field name="VAR">filesList</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="K1)KX6KGXh0Zrl_L_[#M" x="1770" y="1350">
+    <mutation component_type="Button" is_generic="false" instance_name="list_dir" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">list_dir</field>
+    <statement name="DO">
+      <block type="component_set_get" id="6lQm,!NJ{RZ~W4ZnTa*$">
+        <mutation component_type="ListView" set_or_get="set" property_name="Elements" is_generic="false" instance_name="List_View1"></mutation>
+        <field name="COMPONENT_SELECTOR">List_View1</field>
+        <field name="PROP">Elements</field>
+        <value name="VALUE">
+          <block type="component_method" id="w]0BFb]1(9Qx[pNBI)bX">
+            <mutation component_type="FileTools" method_name="FolderList" is_generic="false" instance_name="FileTools1"></mutation>
+            <field name="COMPONENT_SELECTOR">FileTools1</field>
+            <value name="ARG0">
+              <block type="component_set_get" id="eI-q}S_cr=xdAcOg#^Z5">
+                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="Text_Box2"></mutation>
+                <field name="COMPONENT_SELECTOR">Text_Box2</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="r]{xyBM~~L:7PY,%l)]2" x="170" y="1450">
+    <mutation component_type="Button" is_generic="false" instance_name="available_dirs" event_name="LongClick"></mutation>
+    <field name="COMPONENT_SELECTOR">available_dirs</field>
+    <statement name="DO">
+      <block type="component_set_get" id="VVR,B/o}J#Kozi8JaEkl">
+        <mutation component_type="ListView" set_or_get="set" property_name="Elements" is_generic="false" instance_name="List_View1"></mutation>
+        <field name="COMPONENT_SELECTOR">List_View1</field>
+        <field name="PROP">Elements</field>
+        <value name="VALUE">
+          <block type="component_method" id="cA03ep~ZMBBG1CCE0,YS">
+            <mutation component_type="FileTools" method_name="FileListFromAssets" is_generic="false" instance_name="FileTools1"></mutation>
+            <field name="COMPONENT_SELECTOR">FileTools1</field>
+            <comment pinned="false" h="53" w="443">Do It Result: (sunnythedeveloper.png)
+---
+            </comment>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="222" language-version="29"></yacodeblocks>
+</xml>

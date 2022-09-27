@@ -1,0 +1,1 @@
+[{"contentProviders":[],"metadata":[],"broadcastReceivers":[],"broadcastReceiver":[],"libraries":[],"services":[],"type":"com.dreamers.ImageViewer.ImageViewer","androidMinSdk":["7"],"activityMetadata":[],"assets":[],"native":[],"permissions":["android.permission.INTERNET","android.permission.READ_EXTERNAL_STORAGE"],"activities":[]}]

@@ -1,0 +1,146 @@
+[{
+ "categoryString": "EXTENSION",
+ "dateBuilt": "2021-03-11T21:24:58+0500",
+ "nonVisible": "true",
+ "iconName": "",
+ "methods": [{
+  "deprecated": "false",
+  "name": "Create",
+  "description": "Method for Create",
+  "params": [
+   {
+    "name": "layout",
+    "type": "component"
+   },
+   {
+    "name": "path",
+    "type": "text"
+   }
+  ]
+ }],
+ "blockProperties": [
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "Center",
+   "description": "Property for Center",
+   "type": "text"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "CenterCrop",
+   "description": "Property for CenterCrop",
+   "type": "text"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "CenterInside",
+   "description": "Property for CenterInside",
+   "type": "text"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "FitCenter",
+   "description": "Property for FitCenter",
+   "type": "text"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "FitEnd",
+   "description": "Property for FitEnd",
+   "type": "text"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "FitStart",
+   "description": "Property for FitStart",
+   "type": "text"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "FitXY",
+   "description": "Property for FitXY",
+   "type": "text"
+  },
+  {
+   "rw": "read-only",
+   "deprecated": "false",
+   "name": "Matrix",
+   "description": "Property for Matrix",
+   "type": "text"
+  },
+  {
+   "rw": "write-only",
+   "deprecated": "false",
+   "name": "Path",
+   "description": "set image path",
+   "type": "text"
+  },
+  {
+   "rw": "write-only",
+   "deprecated": "false",
+   "name": "ScaleType",
+   "description": "Set image scale type",
+   "type": "text"
+  },
+  {
+   "rw": "write-only",
+   "deprecated": "false",
+   "name": "TransitionDuration",
+   "description": "Set duration for scale transition",
+   "type": "number"
+  },
+  {
+   "rw": "write-only",
+   "deprecated": "false",
+   "name": "Zoomable",
+   "description": "Set image to zoomable",
+   "type": "boolean"
+  }
+ ],
+ "helpUrl": "",
+ "type": "com.dreamers.ImageViewer.ImageViewer",
+ "androidMinSdk": 7,
+ "version": "1",
+ "external": "true",
+ "showOnPalette": "true",
+ "name": "ImageViewer",
+ "helpString": "Component for ImageViewer",
+ "properties": [],
+ "events": [
+  {
+   "deprecated": "false",
+   "name": "OnError",
+   "description": "Event for OnError",
+   "params": [{
+    "name": "error",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "OnScaleChange",
+   "description": "Event raised when image scale changes",
+   "params": [
+    {
+     "name": "scale",
+     "type": "number"
+    },
+    {
+     "name": "x",
+     "type": "number"
+    },
+    {
+     "name": "y",
+     "type": "number"
+    }
+   ]
+  }
+ ]
+}]

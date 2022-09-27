@@ -1,0 +1,103 @@
+[{
+ "categoryString": "EXTENSION",
+ "dateBuilt": "2019-08-25T15:03:56+0200",
+ "nonVisible": "true",
+ "iconName": "http://juanant91.byethost3.com/imagestring.png",
+ "methods": [
+  {
+   "deprecated": "false",
+   "name": "FileToString",
+   "description": "Convert File to String Base64. Prefix the filename with / to read from a specific file on the SD card (for example, /image.png will read the file /sdcard/image.png). To read assets packaged with an application (also works for the Companion) start the filename with // (two slashes).",
+   "params": [{
+    "name": "fileName",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "GetMimeType",
+   "description": "Get mime type by extension. Write file extension, example: png or file name, example: image.png",
+   "params": [{
+    "name": "fileExtension",
+    "type": "text"
+   }],
+   "returnType": "text"
+  },
+  {
+   "deprecated": "false",
+   "name": "StringToFile",
+   "description": "String Base 64 to File. Name file must begins with a slash (/), the file is written to the sdcard (for example, writing to /myFile.txt will write the file to /sdcard/myFile.txt).",
+   "params": [
+    {
+     "name": "string",
+     "type": "text"
+    },
+    {
+     "name": "fileName",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "WebFileToString",
+   "description": "Download web small file and convert it to String. Example: http://mydomain.com/myfile.jpg",
+   "params": [{
+    "name": "fileWeb",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "createDirectory",
+   "description": "Create a directory. Start with /, example: /mydirectory, create a directory in /mnt/sdcard/mydirectory",
+   "params": [{
+    "name": "directory",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "deleteDirectory",
+   "description": "Delete a directory. Start with /, example: /mydirectory, delete directory /mnt/sdcard/mydirectory",
+   "params": [{
+    "name": "directory",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "downloadFile",
+   "description": "Download file from web to a directory, example, address: http://mydomain.com/myfile.jpg destination: /mydirectory. Not return event.",
+   "params": [
+    {
+     "name": "address",
+     "type": "text"
+    },
+    {
+     "name": "destination",
+     "type": "text"
+    }
+   ]
+  }
+ ],
+ "blockProperties": [],
+ "helpUrl": "",
+ "type": "com.KIO4_Base64.KIO4_Base64",
+ "androidMinSdk": 7,
+ "version": "1",
+ "external": "true",
+ "showOnPalette": "true",
+ "name": "KIO4_Base64",
+ "helpString": "Convert file to string in Base 64 and string in Base 64 to file. Get mime type of a file. Juan Antonio Villalpando - KIO4.COM ",
+ "properties": [],
+ "events": [{
+  "deprecated": "false",
+  "name": "GotString",
+  "description": "String from file.",
+  "params": [{
+   "name": "string",
+   "type": "text"
+  }]
+ }]
+}]

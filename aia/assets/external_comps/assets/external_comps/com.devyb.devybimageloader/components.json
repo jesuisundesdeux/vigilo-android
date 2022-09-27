@@ -1,0 +1,266 @@
+[{
+ "categoryString": "EXTENSION",
+ "dateBuilt": "2020-10-03T11:02:46+0200",
+ "nonVisible": "true",
+ "iconName": "https://res.cloudinary.com/dujfnjfcz/image/upload/v1596225104/icon16.png",
+ "methods": [
+  {
+   "deprecated": "false",
+   "name": "CacheImage",
+   "description": "Method for CacheImage",
+   "params": [{
+    "name": "url",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "CachedImageExists",
+   "description": "Method for CachedImageExists",
+   "params": [{
+    "name": "url",
+    "type": "text"
+   }],
+   "returnType": "any"
+  },
+  {
+   "deprecated": "false",
+   "name": "ClearDiskCache",
+   "description": "Method for ClearDiskCache",
+   "params": []
+  },
+  {
+   "deprecated": "false",
+   "name": "ClearMemoryCache",
+   "description": "Method for ClearMemoryCache",
+   "params": []
+  },
+  {
+   "deprecated": "false",
+   "name": "DeleteCachedImage",
+   "description": "Method for DeleteCachedImage",
+   "params": [{
+    "name": "url",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "ExtractCachedImage",
+   "description": "Method for ExtractCachedImage",
+   "params": [
+    {
+     "name": "url",
+     "type": "text"
+    },
+    {
+     "name": "saveIn",
+     "type": "text"
+    },
+    {
+     "name": "extension",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "LoadImage",
+   "description": "Method for LoadImage",
+   "params": [
+    {
+     "name": "imageComponent",
+     "type": "component"
+    },
+    {
+     "name": "url",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "LoadImageAsync",
+   "description": "Method for LoadImageAsync",
+   "params": [
+    {
+     "name": "imageComponent",
+     "type": "component"
+    },
+    {
+     "name": "url",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "LoadImageAsyncInArrangement",
+   "description": "Method for LoadImageAsyncInArrangement",
+   "params": [
+    {
+     "name": "hvArrangement",
+     "type": "component"
+    },
+    {
+     "name": "url",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "LoadImageInArrangement",
+   "description": "Method for LoadImageInArrangement",
+   "params": [
+    {
+     "name": "hvArrangement",
+     "type": "component"
+    },
+    {
+     "name": "url",
+     "type": "text"
+    }
+   ]
+  },
+  {
+   "deprecated": "false",
+   "name": "PauseLoading",
+   "description": "Method for PauseLoading",
+   "params": []
+  },
+  {
+   "deprecated": "false",
+   "name": "ResumeLoading",
+   "description": "Method for ResumeLoading",
+   "params": []
+  },
+  {
+   "deprecated": "false",
+   "name": "StopLoading",
+   "description": "Method for StopLoading",
+   "params": []
+  }
+ ],
+ "blockProperties": [
+  {
+   "rw": "invisible",
+   "deprecated": "false",
+   "name": "DisableCacheInMemory",
+   "description": "Property for DisableCacheInMemory",
+   "type": "boolean"
+  },
+  {
+   "rw": "invisible",
+   "deprecated": "false",
+   "name": "DisableCacheOnDisk",
+   "description": "Property for DisableCacheOnDisk",
+   "type": "boolean"
+  },
+  {
+   "rw": "write-only",
+   "deprecated": "false",
+   "name": "ErrorImage",
+   "description": "Property for ErrorImage",
+   "type": "text"
+  },
+  {
+   "rw": "write-only",
+   "deprecated": "false",
+   "name": "LoadingImage",
+   "description": "Property for LoadingImage",
+   "type": "text"
+  }
+ ],
+ "helpUrl": "",
+ "type": "com.devyb.devybimageloader.DevYBImageLoader",
+ "androidMinSdk": 7,
+ "version": "6",
+ "external": "true",
+ "showOnPalette": "true",
+ "name": "DevYBImageLoader",
+ "helpString": "DevYB Image Loader developed by DevYB.\nExtension for image loading and caching.",
+ "properties": [
+  {
+   "defaultValue": "false",
+   "name": "DisableCacheInMemory",
+   "editorArgs": [],
+   "editorType": "boolean"
+  },
+  {
+   "defaultValue": "false",
+   "name": "DisableCacheOnDisk",
+   "editorArgs": [],
+   "editorType": "boolean"
+  },
+  {
+   "defaultValue": "",
+   "name": "ErrorImage",
+   "editorArgs": [],
+   "editorType": "asset"
+  },
+  {
+   "defaultValue": "",
+   "name": "LoadingImage",
+   "editorArgs": [],
+   "editorType": "asset"
+  }
+ ],
+ "events": [
+  {
+   "deprecated": "false",
+   "name": "OnExtractedCachedImage",
+   "description": "Event for OnExtractedCachedImage",
+   "params": [{
+    "name": "path",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "OnLoadingComplete",
+   "description": "Event for OnLoadingComplete",
+   "params": [{
+    "name": "url",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "OnLoadingFailed",
+   "description": "Event for OnLoadingFailed",
+   "params": [{
+    "name": "url",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "OnLoadingStarted",
+   "description": "Event for OnLoadingStarted",
+   "params": [{
+    "name": "url",
+    "type": "text"
+   }]
+  },
+  {
+   "deprecated": "false",
+   "name": "OnProgress",
+   "description": "Event for OnProgress",
+   "params": [
+    {
+     "name": "url",
+     "type": "text"
+    },
+    {
+     "name": "current",
+     "type": "number"
+    },
+    {
+     "name": "total",
+     "type": "number"
+    }
+   ]
+  }
+ ]
+}]

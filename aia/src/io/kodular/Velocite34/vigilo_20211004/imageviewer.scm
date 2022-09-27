@@ -1,0 +1,4 @@
+#|
+$JSON
+{"authURL":["creator.kodular.io","c.kodular.io"],"YaVersion":"242","Source":"Form","Properties":{"$Name":"imageviewer","$Type":"Form","$Version":"44","AlignHorizontal":"3","AppId":"6015523097673728","AppName":"vigilo_checkpoint2","BackgroundColor":"&HFF000000","MinSdk":"19","PrimaryColor":"&HFFFFD200","RTLSupport":"True","ReceiveSharedText":"none","ShowStatusBar":"False","Theme":"AppTheme.Light.DarkActionBar","Title":"imageviewer","TitleVisible":"False","Uuid":"0","$Components":[{"$Name":"Vertical_Arrangement1","$Type":"VerticalArrangement","$Version":"10","BackgroundColor":"&HFF000000","Height":"-2","Width":"-2","Uuid":"-1335793681"},{"$Name":"ImageViewer1","$Type":"ImageViewer","$Version":"1","Uuid":"-1779768556"}]}}
+|#

@@ -1,0 +1,138 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="procedures_defnoreturn" id="?@.R7)(smBX^|]a|Q=(:" x="-610" y="-550">
+    <mutation>
+      <arg name="screenName"></arg>
+    </mutation>
+    <field name="NAME">switchscreen</field>
+    <field name="VAR0">screenName</field>
+    <statement name="STACK">
+      <block type="controls_if" id="E|+I;)7v{qe7`vU@}$Q~">
+        <value name="IF0">
+          <block type="logic_boolean" id="t[@#,(%la60;z/8%EdJs">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_openAnotherScreen" id="Xj1:g!x2LaCOMjVRK*ob">
+            <value name="SCREEN">
+              <block type="lexical_variable_get" id="]z[UB5#x+we?;ppInv]v">
+                <field name="VAR">screenName</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_closeScreen" id="Wyv?-YOILdAi+.v/xFhl"></block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="A#-!^(yLRt,j!q+h^W}=" x="-610" y="-390">
+    <mutation component_type="Form" is_generic="false" instance_name="explanations" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">explanations</field>
+    <statement name="DO">
+      <block type="controls_if" id="E(w0(HG=pIb7~UP!_Tc7">
+        <value name="IF0">
+          <block type="logic_negate" id="v`O,Kw!3Pol#3{=MRe6c">
+            <value name="BOOL">
+              <block type="text_isEmpty" id="bYQlvm0sMF[g8.n=a0`d">
+                <value name="VALUE">
+                  <block type="component_method" id="xypG*F~p9|$`zn;dFZ;%">
+                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                    <value name="ARG0">
+                      <block type="text" id="$U2c}Xf.2@/72I8;RCo?">
+                        <field name="TEXT">explanation</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="text" id="s^K^XXu{1bbUxrZpr+8+">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_set_get" id="JcVq-;y:`q[XE:uYJ|)t">
+            <mutation component_type="TextBox" set_or_get="set" property_name="Text" is_generic="false" instance_name="explanation_txt"></mutation>
+            <field name="COMPONENT_SELECTOR">explanation_txt</field>
+            <field name="PROP">Text</field>
+            <value name="VALUE">
+              <block type="component_method" id="S*bio:kUG-1v]uK;;Xj`">
+                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+                <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+                <value name="ARG0">
+                  <block type="text" id="%5y!D?7p864*DlVz+o,|">
+                    <field name="TEXT">explanation</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="PMF?gUpSKcd{teR($[]9">
+                    <field name="TEXT"></field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="18upu,gdBm:d~[+l-0Vn" x="-610" y="-150">
+    <mutation component_type="MakeroidFab" is_generic="false" instance_name="ab_validate" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">ab_validate</field>
+    <statement name="DO">
+      <block type="component_method" id=",45rVFUJ,*Ll*qfd!P%A">
+        <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="Tiny_DB1"></mutation>
+        <field name="COMPONENT_SELECTOR">Tiny_DB1</field>
+        <value name="ARG0">
+          <block type="text" id="Ds7uqHjtdTq2u]1r;|OH">
+            <field name="TEXT">explanation</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="component_set_get" id="Jw0t(PD~.T`xn3)qCqYC">
+            <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="explanation_txt"></mutation>
+            <field name="COMPONENT_SELECTOR">explanation_txt</field>
+            <field name="PROP">Text</field>
+          </block>
+        </value>
+        <next>
+          <block type="procedures_callnoreturn" id="l|AOz%irdErsG[--#o|C" inline="false">
+            <mutation name="switchscreen">
+              <arg name="screenName"></arg>
+            </mutation>
+            <field name="PROCNAME">switchscreen</field>
+            <value name="ARG0">
+              <block type="text" id="Y4C,m]39AwB95]0ALfKS">
+                <field name="TEXT">send_go</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="B|2|Rb1)w@.Tymqa[dk(" x="-610" y="50">
+    <mutation component_type="Form" is_generic="false" instance_name="explanations" event_name="BackPressed"></mutation>
+    <field name="COMPONENT_SELECTOR">explanations</field>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="ZBy(PWSlxlX%smt]j3CD" inline="false">
+        <mutation name="switchscreen">
+          <arg name="screenName"></arg>
+        </mutation>
+        <field name="PROCNAME">switchscreen</field>
+        <value name="ARG0">
+          <block type="text" id="ap5je@)sR]z|vw0E2{1y">
+            <field name="TEXT">send</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="241" language-version="34"></yacodeblocks>
+</xml>

@@ -1,8 +1,16 @@
 [{
  "categoryString": "EXTENSION",
+ "dateBuilt": "2020-10-23T15:35:29-0600",
  "nonVisible": "true",
  "iconName": "https://puravidaapps.com/images/taifun16.png",
  "methods": [
+  {
+   "deprecated": "false",
+   "name": "ApplicationSpecificDirectory",
+   "description": "Returns the application specific directory /storage/emulated/0/Android/<packageName>/files you can use to read or write files without READ_ or WRITE_EXTERNAL_STORAGE permission.",
+   "params": [],
+   "returnType": "text"
+  },
   {
    "deprecated": "false",
    "name": "AvailableSize",
@@ -49,6 +57,12 @@
      "type": "text"
     }
    ]
+  },
+  {
+   "deprecated": "false",
+   "name": "CreateApplicationSpecificDirectory",
+   "description": "Creates the application specific directory /storage/emulated/0/Android/<packageName>/files in case it does not exist.",
+   "params": []
   },
   {
    "deprecated": "false",
@@ -205,14 +219,16 @@
  }],
  "helpUrl": "https://puravidaapps.com/file.php",
  "type": "com.puravidaapps.TaifunFile",
- "version": "8",
+ "androidMinSdk": 7,
+ "version": "13",
  "external": "true",
  "showOnPalette": "true",
  "name": "TaifunFile",
- "helpString": "Extension related to the file component. Version 9 as of 2017-09-10 for App Inventor version nb162 and Companion version 2.44.",
+ "helpString": "Extension related to the file component. Version 13 as of 2020-10-23 15:35.",
  "properties": [{
   "defaultValue": "false",
   "name": "SuppressWarnings",
+  "editorArgs": [],
   "editorType": "boolean"
  }],
  "events": [

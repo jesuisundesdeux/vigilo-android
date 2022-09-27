@@ -1,0 +1,1682 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="x-#af:F`tqVi9AK^XE5+" x="10" y="10">
+    <mutation component_type="MakeroidFab" is_generic="false" instance_name="ab_rotate" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">ab_rotate</field>
+    <statement name="DO">
+      <block type="component_set_get" id="l6u6F1x|wm0PJ6~53o+!">
+        <mutation component_type="MakeroidCircularProgress" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Circular_Progress1"></mutation>
+        <field name="COMPONENT_SELECTOR">Circular_Progress1</field>
+        <field name="PROP">Visible</field>
+        <value name="VALUE">
+          <block type="logic_false" id="CVrmJ6M_h^3O7)]HyYAM">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="3zr=5`c5q-qb}@F*YB1-">
+            <mutation component_type="TaifunImage" method_name="Rotate" is_generic="false" instance_name="TaifunImage1"></mutation>
+            <field name="COMPONENT_SELECTOR">TaifunImage1</field>
+            <value name="ARG0">
+              <block type="lexical_variable_get" id="K![I)dStRqepsf(T=]#S">
+                <field name="VAR">global tmppic</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="math_number" id="94y3mOFCKKIdMk}?AxxH">
+                <field name="NUM">90</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="?@.R7)(smBX^|]a|Q=(:" x="10" y="170">
+    <mutation>
+      <arg name="screenName"></arg>
+      <arg name="inputvalue"></arg>
+    </mutation>
+    <field name="NAME">switchscreen</field>
+    <field name="VAR0">screenName</field>
+    <field name="VAR1">inputvalue</field>
+    <statement name="STACK">
+      <block type="controls_if" id="eRG@Q!jg^J@SB`kmM4~$">
+        <value name="IF0">
+          <block type="logic_boolean" id="`e{4G,#WHYZDBP0jcMBh">
+            <field name="BOOL">TRUE</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_if" id="kAacR;|aLr/FFNd3,_;G">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="text_isEmpty" id=".;RLRcGu4c?j)y-y;am5">
+                <value name="VALUE">
+                  <block type="lexical_variable_get" id="0*QvpZ5E;u`x2-nYjSX8">
+                    <field name="VAR">inputvalue</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_openAnotherScreen" id="g9bVl671=$ICue%09:Vs">
+                <value name="SCREEN">
+                  <block type="lexical_variable_get" id="O}9/,r=?6WPTQRS*t+-A">
+                    <field name="VAR">screenName</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="controls_openAnotherScreenWithStartValue" id="Dvz#};^VP[`.)i9T^;Vb">
+                <value name="SCREENNAME">
+                  <block type="lexical_variable_get" id=")_fGm$g-3i4p@dD.RRJ+">
+                    <field name="VAR">screenName</field>
+                  </block>
+                </value>
+                <value name="STARTVALUE">
+                  <block type="lexical_variable_get" id="S_`oS8RbZ4TgA8Pup(ku">
+                    <field name="VAR">inputvalue</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_closeScreen" id="l:bczmO|@HPlTqOdh{A{"></block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="FZk=X=`O35GR@!^3Q=]H" x="10" y="430">
+    <mutation component_type="Image" is_generic="false" instance_name="Image1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Image1</field>
+    <statement name="DO">
+      <block type="component_method" id="he8Ub!`mS;7()~k,OtU@">
+        <mutation component_type="MakeroidFab" method_name="Hide" is_generic="false" instance_name="ab_validate"></mutation>
+        <field name="COMPONENT_SELECTOR">ab_validate</field>
+        <next>
+          <block type="component_method" id="+NKR`XyC)@Y]yr|?)r$m">
+            <mutation component_type="MakeroidFab" method_name="Hide" is_generic="false" instance_name="ab_rotate"></mutation>
+            <field name="COMPONENT_SELECTOR">ab_rotate</field>
+            <next>
+              <block type="procedures_callnoreturn" id="{wHk!iTqz|}++M)@u?em" inline="false">
+                <mutation name="switchscreen">
+                  <arg name="screenName"></arg>
+                  <arg name="inputvalue"></arg>
+                </mutation>
+                <field name="PROCNAME">switchscreen</field>
+                <value name="ARG0">
+                  <block type="text" id="w]W?l-_6]B~4K~oHonTo">
+                    <field name="TEXT">image_editor</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="lists_create_with" id="kxvSh+)u!^;}U-D7]kdX">
+                    <mutation items="1"></mutation>
+                    <value name="ADD0">
+                      <block type="lists_create_with" id="x`_uk=Js562^`qr@K~xp">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="~u.6`0LKXs,.o@}hk9|M">
+                            <field name="TEXT">imagetype</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="lists_lookup_in_pairs" id="wMuK0dTRjPj[ndE.Q?)H">
+                            <value name="KEY">
+                              <block type="text" id="K%dcaApG^.Eo9NEw@+7o">
+                                <field name="TEXT">imagetype</field>
+                              </block>
+                            </value>
+                            <value name="LIST">
+                              <block type="controls_getStartValue" id="gzc=4;nNz@Da1fol*2b?"></block>
+                            </value>
+                            <value name="NOTFOUND">
+                              <block type="text" id="vQp%F;L@m:--~w?sM~6-">
+                                <field name="TEXT">obs</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="MfE_J29L#/=WtpMtujQu" x="10" y="710">
+    <mutation component_type="Form" is_generic="false" instance_name="photo" event_name="BackPressed"></mutation>
+    <field name="COMPONENT_SELECTOR">photo</field>
+    <statement name="DO">
+      <block type="component_method" id="i4f])P60B%)VLU%tZ51s">
+        <mutation component_type="Notifier" method_name="ShowChooseDialog" is_generic="false" instance_name="Notifier1"></mutation>
+        <field name="COMPONENT_SELECTOR">Notifier1</field>
+        <value name="ARG0">
+          <block type="text" id="+)9HVBv^d^JU{M-Pwt_T">
+            <field name="TEXT">Etes vous sur d'annuler la création en cours ?</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="text" id="E-JBip=4m4a~JM+2HT/I">
+            <field name="TEXT">Validation</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block type="text" id="5u`g-[eF?4v;q0I/}|~w">
+            <field name="TEXT">Oui</field>
+          </block>
+        </value>
+        <value name="ARG3">
+          <block type="text" id="0`+f+]H}^CjK~VQ]Lo^:">
+            <field name="TEXT">Annuler</field>
+          </block>
+        </value>
+        <value name="ARG4">
+          <block type="logic_boolean" id="aZ$rGsr[r92ULm*Z5.G+">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="3Uwwy8wD?eq@m,2oZO;}" x="10" y="930">
+    <mutation component_type="MakeroidFab" is_generic="false" instance_name="ab_validate" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">ab_validate</field>
+    <statement name="DO">
+      <block type="controls_if" id="1Ar6OSLrZ{,GAC|=tk5!">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="math_compare" id="7=zf)|_hR[S15;|(g@D^">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="VDS*?Ra|/wpCOTznNjcr">
+                <field name="VAR">global validateenabled</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_boolean" id="T-)HGPmatAu~L4QlqKBa">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_if" id="FvNKc`7CJ)+hw{w8;rp_">
+            <value name="IF0">
+              <block type="logic_or" id="Tn^+2QJA=8_@FabBG`S!">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="math_compare" id="f35G+L]}FL-0Nv!zWS(u">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="component_method" id="UBFUvFz*O4.CO^;G3AS{">
+                        <mutation component_type="TaifunImage" method_name="Height" is_generic="false" instance_name="TaifunImage1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TaifunImage1</field>
+                        <value name="ARG0">
+                          <block type="lexical_variable_get" id="s?_2Ixt}y~9lOgog-KY%">
+                            <field name="VAR">global tmppic</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="i:JaC-h@Vo`KCk,Px/e.">
+                        <field name="NUM">1024</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_compare" id="yyI!3kX4bdUj{8Mww#fP">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="component_method" id="kI!?`:qo#VJvp.M]_UtA">
+                        <mutation component_type="TaifunImage" method_name="Width" is_generic="false" instance_name="TaifunImage1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TaifunImage1</field>
+                        <value name="ARG0">
+                          <block type="lexical_variable_get" id="+Mr.v]f3S!G|;c7Mtne~">
+                            <field name="VAR">global tmppic</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="VyPvji6E4,=7]`94ds_g">
+                        <field name="NUM">1024</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="component_method" id="R*vZ3X)Cr:!Rw#bsHqb/">
+                <mutation component_type="TaifunImage" method_name="Resize" is_generic="false" instance_name="TaifunImage1"></mutation>
+                <field name="COMPONENT_SELECTOR">TaifunImage1</field>
+                <value name="ARG0">
+                  <block type="lexical_variable_get" id="iTecV3*a?a1aoD9C^,0o">
+                    <field name="VAR">global tmppic</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="math_number" id="[.;7ZpRwIn8kWZ~uCuSu">
+                    <field name="NUM">1024</field>
+                  </block>
+                </value>
+                <value name="ARG2">
+                  <block type="math_number" id="j5wi-,je0`tG)ncvD?]B">
+                    <field name="NUM">1024</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="component_method" id="[xag9$|i1b{Ie#;BqyD@">
+                <mutation component_type="MakeroidFab" method_name="Hide" is_generic="false" instance_name="ab_validate"></mutation>
+                <field name="COMPONENT_SELECTOR">ab_validate</field>
+                <next>
+                  <block type="component_method" id="WRDhxa4Jj3sbt6a,!pnZ">
+                    <mutation component_type="MakeroidFab" method_name="Hide" is_generic="false" instance_name="ab_rotate"></mutation>
+                    <field name="COMPONENT_SELECTOR">ab_rotate</field>
+                    <next>
+                      <block type="procedures_callnoreturn" id="QTq#!paa1pIgUlRtY?}l" inline="false">
+                        <mutation name="switchscreen">
+                          <arg name="screenName"></arg>
+                          <arg name="inputvalue"></arg>
+                        </mutation>
+                        <field name="PROCNAME">switchscreen</field>
+                        <value name="ARG0">
+                          <block type="text" id="UG(8;n*]H:RFMRFN,^:q">
+                            <field name="TEXT">location_gmap</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="lists_create_with" id="4zFxm3wPTRUf5dESbJ5m">
+                            <mutation items="1"></mutation>
+                            <value name="ADD0">
+                              <block type="lists_create_with" id="ERKS@%hgVNID]mYKNF1x">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="$rTJha$X@V#*F0Gb*br`">
+                                    <field name="TEXT">imagetype</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="lists_lookup_in_pairs" id="h5DJCtOzCWoAP]!P%~)?">
+                                    <value name="KEY">
+                                      <block type="text" id="4r9lvi%,gS:FhlD)j5bK">
+                                        <field name="TEXT">imagetype</field>
+                                      </block>
+                                    </value>
+                                    <value name="LIST">
+                                      <block type="controls_getStartValue" id=";TgH,q1W=nMeY)Lsf@cx"></block>
+                                    </value>
+                                    <value name="NOTFOUND">
+                                      <block type="text" id="wT[kF=M$u#)N!Hc_B/x2">
+                                        <field name="TEXT">obs</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="component_method" id="e`EJy5ADP%%lPdU1^B^K">
+            <mutation component_type="MakeroidSnackbar" method_name="Show" is_generic="false" instance_name="Snackbar1"></mutation>
+            <field name="COMPONENT_SELECTOR">Snackbar1</field>
+            <value name="ARG0">
+              <block type="text" id="7`#eGz)_l];T?X`-E89=">
+                <field name="TEXT">Veuillez choisir une photo pour passer à la suite</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="1B.!R,,qB3P~Vrn15e[h" x="10" y="1510">
+    <mutation component_type="ImagePicker" is_generic="false" instance_name="ImagePicker1" event_name="AfterPicking"></mutation>
+    <field name="COMPONENT_SELECTOR">ImagePicker1</field>
+    <statement name="DO">
+      <block type="controls_if" id="Ow%6=HlNftdrF-6-0Puk">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="text_is_string" id="4i{{mt]SU](.jc:J3w*L">
+            <value name="ITEM">
+              <block type="component_set_get" id="Sh+bs_m:5Z}YlFW)k-u9">
+                <mutation component_type="ImagePicker" set_or_get="get" property_name="Selection" is_generic="false" instance_name="ImagePicker1"></mutation>
+                <field name="COMPONENT_SELECTOR">ImagePicker1</field>
+                <field name="PROP">Selection</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_if" id="f69]$C[vo_P:;#q]2o%i">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_or" id="7G_JKQp@{cJOZJj:2JV*">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="logic_or" id="ZG,i=]%Ix7*VDRD`zqQ$">
+                    <mutation items="2"></mutation>
+                    <field name="OP">OR</field>
+                    <value name="A">
+                      <block type="text_contains" id="KqKCM/t$PV,5ss364!Od">
+                        <value name="TEXT">
+                          <block type="component_set_get" id="V;`#Iat,aU_@#1Ju7(Wc">
+                            <mutation component_type="ImagePicker" set_or_get="get" property_name="Selection" is_generic="false" instance_name="ImagePicker1"></mutation>
+                            <field name="COMPONENT_SELECTOR">ImagePicker1</field>
+                            <field name="PROP">Selection</field>
+                          </block>
+                        </value>
+                        <value name="PIECE">
+                          <block type="text" id="!x?N4SmbZR7)4`n2Dvus">
+                            <field name="TEXT">.jpg</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text_contains" id="ugrgz`0V@6igM|Pp4*YJ">
+                        <value name="TEXT">
+                          <block type="component_set_get" id="/)5N**UvishOj6?he!bt">
+                            <mutation component_type="ImagePicker" set_or_get="get" property_name="Selection" is_generic="false" instance_name="ImagePicker1"></mutation>
+                            <field name="COMPONENT_SELECTOR">ImagePicker1</field>
+                            <field name="PROP">Selection</field>
+                          </block>
+                        </value>
+                        <value name="PIECE">
+                          <block type="text" id="u[^p/;DUkhETrbewRcWU">
+                            <field name="TEXT">.JPG</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_or" id="~gV|-Zwh9STXvJz#McN7">
+                    <mutation items="2"></mutation>
+                    <field name="OP">OR</field>
+                    <value name="A">
+                      <block type="text_contains" id="AQ@=Lyg/TtP++#Xy^PDx">
+                        <value name="TEXT">
+                          <block type="component_set_get" id="iG;$8ADeF(99ouMNg8@z">
+                            <mutation component_type="ImagePicker" set_or_get="get" property_name="Selection" is_generic="false" instance_name="ImagePicker1"></mutation>
+                            <field name="COMPONENT_SELECTOR">ImagePicker1</field>
+                            <field name="PROP">Selection</field>
+                          </block>
+                        </value>
+                        <value name="PIECE">
+                          <block type="text" id="LSHZKZ2gpAo7_#a~onCz">
+                            <field name="TEXT">.JPEG</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="text_contains" id="g,pBBPPWJVj|uvme8.(7">
+                        <value name="TEXT">
+                          <block type="component_set_get" id="xjju_4KGHb$MYk.KhnFx">
+                            <mutation component_type="ImagePicker" set_or_get="get" property_name="Selection" is_generic="false" instance_name="ImagePicker1"></mutation>
+                            <field name="COMPONENT_SELECTOR">ImagePicker1</field>
+                            <field name="PROP">Selection</field>
+                          </block>
+                        </value>
+                        <value name="PIECE">
+                          <block type="text" id="B0Y(U]WB%f$6u^LD=YTX">
+                            <field name="TEXT">.jpeg</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="component_set_get" id="F*~0u!+RCT?~iAAlC^bs">
+                <mutation component_type="MakeroidFab" set_or_get="set" property_name="IconColor" is_generic="false" instance_name="ab_validate"></mutation>
+                <field name="COMPONENT_SELECTOR">ab_validate</field>
+                <field name="PROP">IconColor</field>
+                <value name="VALUE">
+                  <block type="color_make_color" id="v.w7|M[NGa$Vhhl?qHc+">
+                    <value name="COLORLIST">
+                      <block type="lists_create_with" id="u(t#dJ{vWmuc~2A4[6%2" inline="false">
+                        <mutation items="3"></mutation>
+                        <value name="ADD0">
+                          <block type="math_number" id="Kk|J7l_:J``mC!Z%JIJG">
+                            <field name="NUM">68</field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="math_number" id=")C3na(MY=j;7vc6{SroS">
+                            <field name="NUM">68</field>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="math_number" id="EqOUVJ$-ZpdzYf[8FH5b">
+                            <field name="NUM">68</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="lexical_variable_set" id="]4g_-p]puj[A#7QWg?^=">
+                    <field name="VAR">global validateenabled</field>
+                    <value name="VALUE">
+                      <block type="logic_boolean" id="JB*w!#MDK)0)=8)?VY*7">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_method" id="k_+scO[0b1-x/O6B*2-l">
+                        <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                        <value name="ARG0">
+                          <block type="text" id="N.ExA(BciI7^ZfJ[/Yc/">
+                            <field name="TEXT">type_photo</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="text" id="z_1qoFPj7^ve]^Sr~T^L">
+                            <field name="TEXT">pick</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="component_method" id="^0Z1yF7nA{HYgK^4nA7$">
+                            <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                            <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                            <value name="ARG0">
+                              <block type="text" id="gO%$}Rf_cXG%Si2O[Je6">
+                                <field name="TEXT">photo</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="text_join" id="Uv[6),ElvL1klzuwyV7_">
+                                <mutation items="2"></mutation>
+                                <value name="ADD0">
+                                  <block type="text" id="p=DVHt,U|{xqmuIXi0as">
+                                    <field name="TEXT">file://</field>
+                                  </block>
+                                </value>
+                                <value name="ADD1">
+                                  <block type="lexical_variable_get" id="(hF1mJJXKULd*14QTVlz">
+                                    <mutation>
+                                      <eventparam name="selection"></eventparam>
+                                    </mutation>
+                                    <field name="VAR">selection</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_method" id="6?nA+_LDL4a@99A$=iOX">
+                                <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                <value name="ARG0">
+                                  <block type="text" id="_zcrl;op#Mw~(Z_D4/%{">
+                                    <field name="TEXT">photo_upd</field>
+                                  </block>
+                                </value>
+                                <value name="ARG1">
+                                  <block type="lexical_variable_get" id="ecp4osTtRF]f6xz2pev2">
+                                    <field name="VAR">global tmppic</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="procedures_callnoreturn" id="Q-OaB@G9!nS;vSHw^8]E" inline="false">
+                                    <mutation name="creattmpimage">
+                                      <arg name="filename"></arg>
+                                    </mutation>
+                                    <field name="PROCNAME">creattmpimage</field>
+                                    <value name="ARG0">
+                                      <block type="text_join" id="@b/wO3C=zrf_A:n}D}(s">
+                                        <mutation items="2"></mutation>
+                                        <value name="ADD0">
+                                          <block type="text" id="vkU^%!m+ArHRC/I,|V4.">
+                                            <field name="TEXT">file://</field>
+                                          </block>
+                                        </value>
+                                        <value name="ADD1">
+                                          <block type="lexical_variable_get" id="CJQ(;~kYIeSFL[/]%IV}">
+                                            <mutation>
+                                              <eventparam name="selection"></eventparam>
+                                            </mutation>
+                                            <field name="VAR">selection</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="component_set_get" id="WZ4b$-dl+ieW@tp]ii;-">
+                                        <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="warning_block"></mutation>
+                                        <field name="COMPONENT_SELECTOR">warning_block</field>
+                                        <field name="PROP">Visible</field>
+                                        <value name="VALUE">
+                                          <block type="logic_boolean" id="f#rr~zmhTM%]k?U^@T6H">
+                                            <field name="BOOL">FALSE</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="component_set_get" id="[vBivlzFx9R0;EV]Jctb">
+                                            <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="image_block"></mutation>
+                                            <field name="COMPONENT_SELECTOR">image_block</field>
+                                            <field name="PROP">Visible</field>
+                                            <value name="VALUE">
+                                              <block type="logic_false" id="R[d!0M/tzO#[)d]tqMFk">
+                                                <field name="BOOL">TRUE</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="component_set_get" id="dK*Ua`ITN$)$1D,,VNjw">
+                                                <mutation component_type="MakeroidCircularProgress" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Circular_Progress1"></mutation>
+                                                <field name="COMPONENT_SELECTOR">Circular_Progress1</field>
+                                                <field name="PROP">Visible</field>
+                                                <value name="VALUE">
+                                                  <block type="logic_false" id="!9^RA(|JFVrV#2U%5%x=">
+                                                    <field name="BOOL">TRUE</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="component_method" id="8rp+EK_(+FXAO71f.yGQ">
+                <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                <field name="COMPONENT_SELECTOR">Notifier1</field>
+                <value name="ARG0">
+                  <block type="text" id=",AxqeSBT:K@kJ4:38s1I">
+                    <field name="TEXT">Format de fichier non supporté !</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="component_method" id="q}t__UNNL.C004am}=km">
+            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text" id="DD,OmxS0G90.#[wGrEhG">
+                <field name="TEXT">Impossible d'accéder à l'image</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="GrvN,amQ_!O-v_9pa@lT" x="10" y="2370">
+    <field name="NAME">stacktrace</field>
+    <value name="VALUE">
+      <block type="text" id="CxXY*I%h-N45DdkcQ^`E">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+  <block type="procedures_defnoreturn" id="cVT^i6$HD8ywtnMmWk8A" x="10" y="2430">
+    <field name="NAME">prepareimage</field>
+    <statement name="STACK">
+      <block type="component_set_get" id="9gUD]B3h1d7FA1G9,a(;">
+        <mutation component_type="MakeroidCircularProgress" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Circular_Progress1"></mutation>
+        <field name="COMPONENT_SELECTOR">Circular_Progress1</field>
+        <field name="PROP">Visible</field>
+        <value name="VALUE">
+          <block type="logic_boolean" id="fiq%]UmqL-:iRa`$*x^K">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_set_get" id="m4Wc6Ubf{;k9E{B5Hm/+">
+            <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image1"></mutation>
+            <field name="COMPONENT_SELECTOR">Image1</field>
+            <field name="PROP">Picture</field>
+            <value name="VALUE">
+              <block type="component_method" id="8otz;=bpHynB;eJAaZr/">
+                <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                <value name="ARG0">
+                  <block type="text" id="kIwWbmSn#g,$#06l-yty">
+                    <field name="TEXT">photo_upd</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="eeRF~Ho=ZDg-Uranota]">
+                    <field name="TEXT"></field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="global_declaration" id="J.*d|a:bh2%Yi!M}M._T" x="10" y="2590">
+    <field name="NAME">canvastouched</field>
+    <value name="VALUE">
+      <block type="math_number" id="u^z[F]$j4.r+g_[/4eB(">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="HfGZeF2]v]Np-fYIQ@dQ" x="10" y="2650">
+    <field name="NAME">validateenabled</field>
+    <value name="VALUE">
+      <block type="logic_false" id="NvsO5|}X7k|W3*L37[yQ">
+        <field name="BOOL">FALSE</field>
+      </block>
+    </value>
+  </block>
+  <block type="global_declaration" id="3s!xK7[MDk3#~{M3Znhk" x="10" y="2710">
+    <field name="NAME">tmppic</field>
+    <value name="VALUE">
+      <block type="text" id="j@604YDWO0R(1HA%X_6e">
+        <field name="TEXT">file:///mnt/sdcard/vigilo/tmp_picture.jpg</field>
+      </block>
+    </value>
+  </block>
+  <block type="component_event" id="PAK%%B;/#7TW?ayN.IYX" x="10" y="2770">
+    <mutation component_type="FileTools" is_generic="false" instance_name="FileTools1" event_name="FileCopied"></mutation>
+    <field name="COMPONENT_SELECTOR">FileTools1</field>
+    <statement name="DO">
+      <block type="controls_if" id="ab|_f$mMr[U,dxH/hb)(">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="/2MW/Dkws2g/CIS3yP]j">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="BJrzqzYfI`Sw!ND,YTq.">
+                <mutation>
+                  <eventparam name="successful"></eventparam>
+                </mutation>
+                <field name="VAR">successful</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_boolean" id="3:@t4=!qZ6P|::7byTBu">
+                <field name="BOOL">TRUE</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="local_declaration_statement" id="nga?hPK?*t{4Lb2e*-cu">
+            <mutation>
+              <localname name="imagemetadata"></localname>
+            </mutation>
+            <field name="VAR0">imagemetadata</field>
+            <value name="DECL0">
+              <block type="component_method" id="K|KTEXnC9s{_C._pArov">
+                <mutation component_type="TaifunMetadata" method_name="Get" is_generic="false" instance_name="TaifunMetadata1"></mutation>
+                <field name="COMPONENT_SELECTOR">TaifunMetadata1</field>
+                <value name="ARG0">
+                  <block type="lexical_variable_get" id="AE-tTmOPSCAa`n=wCOIU">
+                    <field name="VAR">global tmppic</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="STACK">
+              <block type="component_set_get" id="msT[#JsM*J@mxZ|ahY@t">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="list2text"></mutation>
+                <field name="COMPONENT_SELECTOR">list2text</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE">
+                  <block type="lexical_variable_get" id="BqlUSw-L/l,T8_w70H:G">
+                    <field name="VAR">imagemetadata</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="local_declaration_statement" id="*nG!$^9.ZP885+3tMLc.">
+                    <mutation>
+                      <localname name="rotate"></localname>
+                    </mutation>
+                    <field name="VAR0">rotate</field>
+                    <value name="DECL0">
+                      <block type="controls_choose" id="[9qHqK8uJ8l,gxvGq:xW">
+                        <value name="TEST">
+                          <block type="text_contains" id="4~v[X`1T69Xa5vhgw:kv">
+                            <value name="TEXT">
+                              <block type="component_set_get" id="wzHKsw.%,xt*inxX%zp(">
+                                <mutation component_type="Label" set_or_get="get" property_name="Text" is_generic="false" instance_name="list2text"></mutation>
+                                <field name="COMPONENT_SELECTOR">list2text</field>
+                                <field name="PROP">Text</field>
+                              </block>
+                            </value>
+                            <value name="PIECE">
+                              <block type="text" id="a(@K*~439NkpM|ou{Q)$">
+                                <field name="TEXT">Rotate</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="THENRETURN">
+                          <block type="text_replace_all" id="4g~R?F/{cNJ:*x.lkTfx">
+                            <value name="TEXT">
+                              <block type="text_replace_all" id="b*q2|#UKj(=Wi@Sy_v]D">
+                                <value name="TEXT">
+                                  <block type="lists_select_item" id="QveV0X7c^ay]43CYgSqx">
+                                    <value name="LIST">
+                                      <block type="text_split" id="NCI50FWJ!17C+vAsu^?y">
+                                        <mutation mode="SPLITATFIRST"></mutation>
+                                        <field name="OP">SPLITATFIRST</field>
+                                        <value name="TEXT">
+                                          <block type="lists_lookup_in_pairs" id="DIs{]fKKJg@WNnA7YFBq">
+                                            <value name="KEY">
+                                              <block type="text" id="f4z56[(#TJu/0W]u)2d,">
+                                                <field name="TEXT">Orientation</field>
+                                              </block>
+                                            </value>
+                                            <value name="LIST">
+                                              <block type="lists_select_item" id="$gwaKK|NM(yMMxC.lhvG">
+                                                <value name="LIST">
+                                                  <block type="lists_select_item" id=":keG`~^qDE=]`;K:d/B@">
+                                                    <value name="LIST">
+                                                      <block type="lexical_variable_get" id="O.`sYjDfvb:|R-OS|byA">
+                                                        <field name="VAR">imagemetadata</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="NUM">
+                                                      <block type="math_number" id="6K?F+!HmbiPAvI2ls~.z">
+                                                        <field name="NUM">1</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                                <value name="NUM">
+                                                  <block type="math_number" id="-iTU?2]Yka6._3h)h:]6">
+                                                    <field name="NUM">2</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <value name="NOTFOUND">
+                                              <block type="text" id="5zfr/^h])D(dA+mV3sgR">
+                                                <field name="TEXT">not found</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <value name="AT">
+                                          <block type="text" id="dls/ecaz1IQmW|[di4-3">
+                                            <field name="TEXT">Rotate</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <value name="NUM">
+                                      <block type="math_number" id="1,IuZP.Xp%_FZ)(@36)%">
+                                        <field name="NUM">2</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="SEGMENT">
+                                  <block type="text" id="]aybHO0RvY1z{MEW[l@6">
+                                    <field name="TEXT">)</field>
+                                  </block>
+                                </value>
+                                <value name="REPLACEMENT">
+                                  <block type="text" id="i;7E-hH~HHF@Dz)u^9/h">
+                                    <field name="TEXT"></field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <value name="SEGMENT">
+                              <block type="text" id="HX)9X@KprYZirTCwrEcG">
+                                <field name="TEXT"> </field>
+                              </block>
+                            </value>
+                            <value name="REPLACEMENT">
+                              <block type="text" id="aM@RXRkiIkUq+7a|@/9P">
+                                <field name="TEXT"></field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ELSERETURN">
+                          <block type="controls_do_then_return" id="bxXuN+cUGPjJEqcdV}([">
+                            <statement name="STM">
+                              <block type="procedures_callnoreturn" id="wKK_CCwe8ck!vYx0q:=|" inline="false">
+                                <mutation name="prepareimage"></mutation>
+                                <field name="PROCNAME">prepareimage</field>
+                              </block>
+                            </statement>
+                            <value name="VALUE">
+                              <block type="logic_false" id="U{O,)WfY.}r#eIc+EMxZ">
+                                <field name="BOOL">FALSE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="STACK">
+                      <block type="controls_if" id="foQ?T).0W{gfVz*0Jz?p">
+                        <mutation else="1"></mutation>
+                        <value name="IF0">
+                          <block type="math_compare" id="^%pjzP|.4+M2EQcdBVx}">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="lexical_variable_get" id="{noO,TbOa^[?d.D](QD7">
+                                <field name="VAR">rotate</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="text" id="22[uyslUQBFk2p/M)1=.">
+                                <field name="TEXT">90CW</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="component_method" id="jygh3p8Xf]),B#ek_xkR">
+                            <mutation component_type="TaifunImage" method_name="Rotate" is_generic="false" instance_name="TaifunImage1"></mutation>
+                            <field name="COMPONENT_SELECTOR">TaifunImage1</field>
+                            <value name="ARG0">
+                              <block type="lexical_variable_get" id="UUKtmiB~/3XE9k2Odbox">
+                                <field name="VAR">global tmppic</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="math_number" id="JeOfOnQZPCh.h:Y?XFVT">
+                                <field name="NUM">90</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="procedures_callnoreturn" id="|47`!5%pm0_E83B7w818" inline="false">
+                            <mutation name="prepareimage"></mutation>
+                            <field name="PROCNAME">prepareimage</field>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="component_method" id="UviGl,P:!8M/+qfHt8gI">
+                <mutation component_type="MakeroidFab" method_name="Show" is_generic="false" instance_name="ab_rotate"></mutation>
+                <field name="COMPONENT_SELECTOR">ab_rotate</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="component_method" id="Hd@}YN:%]F9pHRDn?VSw">
+            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text_join" id="WI[]iof}L%@rD_)N)f(P">
+                <mutation items="2"></mutation>
+                <value name="ADD0">
+                  <block type="text" id="a9Y|Akv99gRGH}vh.9Gk">
+                    <field name="TEXT">Erreur de copie du fichier dans </field>
+                  </block>
+                </value>
+                <value name="ADD1">
+                  <block type="lexical_variable_get" id="_R.)1@Xbq461r*wPp:is">
+                    <field name="VAR">global tmppic</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="Z}V|g?JC60p,g(s;2FZC" x="10" y="3710">
+    <mutation component_type="Camera" is_generic="false" instance_name="Camera1" event_name="AfterPicture"></mutation>
+    <field name="COMPONENT_SELECTOR">Camera1</field>
+    <statement name="DO">
+      <block type="controls_if" id="ZV2IB7;etY0slbK`Yz}O">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_or" id=";J=V#YhHLqL2[2wlz5t4">
+            <mutation items="2"></mutation>
+            <field name="OP">OR</field>
+            <value name="A">
+              <block type="logic_or" id="+V5)a49Sz=whZ+hQ+;R0">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="text_contains" id="$P8J_osnHL^v^fxbJ$)#">
+                    <value name="TEXT">
+                      <block type="lexical_variable_get" id="`pOAz*8vvlUl4/+^8*LQ">
+                        <mutation>
+                          <eventparam name="image"></eventparam>
+                        </mutation>
+                        <field name="VAR">image</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="*:hZ8Mh|(tmJ~unN8SZE">
+                        <field name="TEXT">.jpg</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text_contains" id="E%9y$8Xy??QY||s,7eP#">
+                    <value name="TEXT">
+                      <block type="lexical_variable_get" id="I.pm$=JW]|vdrgMC#c+M">
+                        <mutation>
+                          <eventparam name="image"></eventparam>
+                        </mutation>
+                        <field name="VAR">image</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id=";wK/1cBZ]2^hGS_b^jq+">
+                        <field name="TEXT">.JPG</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_or" id="WXwN._JCHUUhaB5koAO8">
+                <mutation items="2"></mutation>
+                <field name="OP">OR</field>
+                <value name="A">
+                  <block type="text_contains" id="NMFz?+OgGeP?GbvzKH4Y">
+                    <value name="TEXT">
+                      <block type="lexical_variable_get" id="[4=]-;k0zW]xyj^YI[u/">
+                        <mutation>
+                          <eventparam name="image"></eventparam>
+                        </mutation>
+                        <field name="VAR">image</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="[z@Jnp7?4vvB8uBs73sT">
+                        <field name="TEXT">.JPEG</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text_contains" id="d+Q:}8VC(!;hFjB[Nd^]">
+                    <value name="TEXT">
+                      <block type="lexical_variable_get" id="REUOIhd}-r:-DQ!JYET~">
+                        <mutation>
+                          <eventparam name="image"></eventparam>
+                        </mutation>
+                        <field name="VAR">image</field>
+                      </block>
+                    </value>
+                    <value name="PIECE">
+                      <block type="text" id="w%Umzjvgo%4BvlfjV2OA">
+                        <field name="TEXT">.jpeg</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_method" id="8E*m?kAmn^XCUYN6X=*-">
+            <mutation component_type="FileTools" method_name="MoveFile" is_generic="false" instance_name="FileTools1"></mutation>
+            <field name="COMPONENT_SELECTOR">FileTools1</field>
+            <value name="ARG0">
+              <block type="lexical_variable_get" id="24Jmd9@c?q]TvHT-Wt_m">
+                <mutation>
+                  <eventparam name="image"></eventparam>
+                </mutation>
+                <field name="VAR">image</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block type="text_replace_all" id="@IR)5:#kK;~bn7rOZxlS">
+                <value name="TEXT">
+                  <block type="lexical_variable_get" id="j!!S57seF(IDpG7!2LZp">
+                    <mutation>
+                      <eventparam name="image"></eventparam>
+                    </mutation>
+                    <field name="VAR">image</field>
+                  </block>
+                </value>
+                <value name="SEGMENT">
+                  <block type="text" id="Epn~Bz;qTl*WH6qx)2,:">
+                    <field name="TEXT">kodular</field>
+                  </block>
+                </value>
+                <value name="REPLACEMENT">
+                  <block type="text" id="#m]?+?9M@7;CY(DBuZ!!">
+                    <field name="TEXT">vigilo</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="MXez=As^Kl8uqFhl}%3o">
+                <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                <value name="ARG0">
+                  <block type="text" id="@)[Upl?@X+F2EE~DDt}}">
+                    <field name="TEXT">type_photo</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <block type="text" id="s3Nw2k2-8M%gzJ}kzPac">
+                    <field name="TEXT">camera</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="component_method" id="{05ev~mOxBAHG!,vtX(3">
+                    <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                    <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                    <value name="ARG0">
+                      <block type="text" id="ck.y/BR]AzCpZg#w4Kj.">
+                        <field name="TEXT">photo</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="text_replace_all" id=";vre/#,Z28QLP(,)aBg?">
+                        <value name="TEXT">
+                          <block type="lexical_variable_get" id="$S9IB(gPu^`@QO-vdltC">
+                            <mutation>
+                              <eventparam name="image"></eventparam>
+                            </mutation>
+                            <field name="VAR">image</field>
+                          </block>
+                        </value>
+                        <value name="SEGMENT">
+                          <block type="text" id="q3h(2rMj{L4:;hB//g|$">
+                            <field name="TEXT">kodular</field>
+                          </block>
+                        </value>
+                        <value name="REPLACEMENT">
+                          <block type="text" id="{RMYs%1*=/~x,zcIf!!2">
+                            <field name="TEXT">vigilo</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="component_method" id="`9:?G@c.p,!n1)os~xSw">
+                        <mutation component_type="TinyDB" method_name="StoreValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                        <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                        <value name="ARG0">
+                          <block type="text" id="y~l%f3J2`rx!15q)|XH+">
+                            <field name="TEXT">photo_upd</field>
+                          </block>
+                        </value>
+                        <value name="ARG1">
+                          <block type="lexical_variable_get" id="qac1)##0;lf{cfMA91R{">
+                            <field name="VAR">global tmppic</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="procedures_callnoreturn" id="Lh@0TEqEsVuyMUKs^n)1" inline="false">
+                            <mutation name="creattmpimage">
+                              <arg name="filename"></arg>
+                            </mutation>
+                            <field name="PROCNAME">creattmpimage</field>
+                            <value name="ARG0">
+                              <block type="text_replace_all" id="(yMeS_7W7iNXc!^LlK1T">
+                                <value name="TEXT">
+                                  <block type="lexical_variable_get" id="HbNM?:d~)PfaL*+O2hhP">
+                                    <mutation>
+                                      <eventparam name="image"></eventparam>
+                                    </mutation>
+                                    <field name="VAR">image</field>
+                                  </block>
+                                </value>
+                                <value name="SEGMENT">
+                                  <block type="text" id="R@G0mMl)Z:nd`(Tp8A2*">
+                                    <field name="TEXT">kodular</field>
+                                  </block>
+                                </value>
+                                <value name="REPLACEMENT">
+                                  <block type="text" id="S}6y@DHWTalnruWAe,:O">
+                                    <field name="TEXT">vigilo</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="#DNfxM!E*^q(Y9gQ::-5">
+                                <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="warning_block"></mutation>
+                                <field name="COMPONENT_SELECTOR">warning_block</field>
+                                <field name="PROP">Visible</field>
+                                <value name="VALUE">
+                                  <block type="logic_boolean" id="V^e,qUR{[B.A||51/RAI">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="component_set_get" id="y/^tdB`,lHAk*eS;x6$)">
+                                    <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="image_block"></mutation>
+                                    <field name="COMPONENT_SELECTOR">image_block</field>
+                                    <field name="PROP">Visible</field>
+                                    <value name="VALUE">
+                                      <block type="logic_false" id="3}}rV7p!//6vrCqNf:Ap">
+                                        <field name="BOOL">TRUE</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="component_set_get" id="O*V=F+,J0)[Ip[7#c;(L">
+                                        <mutation component_type="MakeroidCircularProgress" set_or_get="set" property_name="Visible" is_generic="false" instance_name="Circular_Progress1"></mutation>
+                                        <field name="COMPONENT_SELECTOR">Circular_Progress1</field>
+                                        <field name="PROP">Visible</field>
+                                        <value name="VALUE">
+                                          <block type="logic_false" id="VJ`PRuCo5}wkr5XsqNR)">
+                                            <field name="BOOL">TRUE</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="component_set_get" id="Kn8cZuliu|?IJEMPs[jr">
+                                            <mutation component_type="MakeroidFab" set_or_get="set" property_name="IconColor" is_generic="false" instance_name="ab_validate"></mutation>
+                                            <field name="COMPONENT_SELECTOR">ab_validate</field>
+                                            <field name="PROP">IconColor</field>
+                                            <value name="VALUE">
+                                              <block type="color_make_color" id="-(?TUfMkwxRRtd257)n|">
+                                                <value name="COLORLIST">
+                                                  <block type="lists_create_with" id="Ujl9()3Lr5ev/]0p]A$}" inline="false">
+                                                    <mutation items="3"></mutation>
+                                                    <value name="ADD0">
+                                                      <block type="math_number" id=":!K#;W{3rKq?|d_fJm)h">
+                                                        <field name="NUM">68</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ADD1">
+                                                      <block type="math_number" id="yM]PNTbI7ViB{Sh5|3Yc">
+                                                        <field name="NUM">68</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ADD2">
+                                                      <block type="math_number" id="D6U6!(-+=+;N0Qg9pS7.">
+                                                        <field name="NUM">68</field>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="lexical_variable_set" id="og[#t,K+pU#6Yod@uri!">
+                                                <field name="VAR">global validateenabled</field>
+                                                <value name="VALUE">
+                                                  <block type="logic_boolean" id="~+K=!V6^4qvK;SX^T}ey">
+                                                    <field name="BOOL">TRUE</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="component_method" id="o22fOTI+?LZ^/Bb?7Bw!">
+            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text" id="6RFrhD^tMgh(G}IIAe@0">
+                <field name="TEXT">Format de fichier non supporté !</field>
+              </block>
+            </value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="jhIK8g:^)Y|Hle}rhN+!" x="10" y="4650">
+    <mutation component_type="Notifier" is_generic="false" instance_name="Notifier1" event_name="AfterChoosing"></mutation>
+    <field name="COMPONENT_SELECTOR">Notifier1</field>
+    <statement name="DO">
+      <block type="controls_if" id="^zV!Tv@OI(RDJq~h(GTA">
+        <value name="IF0">
+          <block type="math_compare" id="4T4$z_zk2+J_7-w1b!c3">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="lexical_variable_get" id="u!)o_G{}7M7=cG`|Ta#.">
+                <mutation>
+                  <eventparam name="choice"></eventparam>
+                </mutation>
+                <field name="VAR">choice</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text" id="G55[H8?R(8A|J{SWw%wy">
+                <field name="TEXT">Oui</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="component_method" id="}2UQLsL^-!|ENY)o5z,Y">
+            <mutation component_type="MakeroidFab" method_name="Hide" is_generic="false" instance_name="ab_validate"></mutation>
+            <field name="COMPONENT_SELECTOR">ab_validate</field>
+            <next>
+              <block type="component_method" id="sm~qxL,8JAh(GM],KZPv">
+                <mutation component_type="MakeroidFab" method_name="Hide" is_generic="false" instance_name="ab_rotate"></mutation>
+                <field name="COMPONENT_SELECTOR">ab_rotate</field>
+                <next>
+                  <block type="procedures_callnoreturn" id="hTg#yay1HJt4~.ZuwZV_" inline="false">
+                    <mutation name="switchscreen">
+                      <arg name="screenName"></arg>
+                      <arg name="inputvalue"></arg>
+                    </mutation>
+                    <field name="PROCNAME">switchscreen</field>
+                    <value name="ARG0">
+                      <block type="text" id="A~Tl{}0D{U[`H2~E;%dk">
+                        <field name="TEXT">showobs</field>
+                      </block>
+                    </value>
+                    <value name="ARG1">
+                      <block type="text" id="WliK0dqarj^IqrZFU?4h">
+                        <field name="TEXT"></field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="XiRz~#OwZIk%A]Se~Cf@" x="10" y="4930">
+    <mutation component_type="Form" is_generic="false" instance_name="photo" event_name="Initialize"></mutation>
+    <field name="COMPONENT_SELECTOR">photo</field>
+    <statement name="DO">
+      <block type="component_method" id="=k;+P?8H?Z1}mVUllBa!">
+        <mutation component_type="Form" method_name="AskForPermission" is_generic="false" instance_name="photo"></mutation>
+        <field name="COMPONENT_SELECTOR">photo</field>
+        <value name="ARG0">
+          <block type="helpers_dropdown" id="eGm0MYu^HuWj7*8`kERc">
+            <mutation key="Permission"></mutation>
+            <field name="OPTION">WriteExternalStorage</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="hgs{$gi**ip^-p|}8i2R">
+            <mutation component_type="Form" method_name="AskForPermission" is_generic="false" instance_name="photo"></mutation>
+            <field name="COMPONENT_SELECTOR">photo</field>
+            <value name="ARG0">
+              <block type="helpers_dropdown" id="}-yL.L}YSoZK4cqzU!Yu">
+                <mutation key="Permission"></mutation>
+                <field name="OPTION">ReadExternalStorage</field>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="nTGye:8c:!;c)C{h]Pv[" disabled="true">
+                <mutation component_type="File" method_name="CreateDirectory" is_generic="false" instance_name="File1"></mutation>
+                <field name="COMPONENT_SELECTOR">File1</field>
+                <value name="ARG0">
+                  <block type="text" id="W@3xOK]O|`~6Jf%_2,to">
+                    <field name="TEXT">file:///mnt/sdcard/vigilo/</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="lexical_variable_set" id="w`|E?.u,3}`+bP=A0IFw">
+                    <field name="VAR">global tmppic</field>
+                    <value name="VALUE">
+                      <block type="text_join" id="A%x2s;RJZeT|qSBRRKB~">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0">
+                          <block type="component_method" id=";EhX~=GsEkm(oCoIs==N">
+                            <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                            <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                            <value name="ARG0">
+                              <block type="text" id="gu$nb0@PlF4ftT;91,Ld">
+                                <field name="TEXT">application_path</field>
+                              </block>
+                            </value>
+                            <value name="ARG1">
+                              <block type="text" id="[~V-N?yRi#]!he(v20wG">
+                                <field name="TEXT">/vigilo</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="text" id="qQdmJyJS~H3+PM[=!W^M">
+                            <field name="TEXT">/tmp_picture.jpg</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="controls_if" id="gi(Yrzy(bEqfF5Z!UOE*">
+                        <value name="IF0">
+                          <block type="logic_negate" id="|N;AiVn!N{82flTGYD=v">
+                            <value name="BOOL">
+                              <block type="text_isEmpty" id="sw]PQxi%6.cj7e1l~*;L">
+                                <value name="VALUE">
+                                  <block type="component_method" id="/n3+9|Suq3wTcCfAS?tu">
+                                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                    <value name="ARG0">
+                                      <block type="text" id="w*qYwukNh{%2g(?6eE?V">
+                                        <field name="TEXT">photo_upd</field>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block type="text" id=";6T*jZ9=!MGHRj,N$t=v">
+                                        <field name="TEXT"></field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="component_set_get" id="@]_RH[.!rGRM.[:-X7g3">
+                            <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="warning_block"></mutation>
+                            <field name="COMPONENT_SELECTOR">warning_block</field>
+                            <field name="PROP">Visible</field>
+                            <value name="VALUE">
+                              <block type="logic_false" id="TE}S#FTHh57+Bd^,4(!+">
+                                <field name="BOOL">FALSE</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="component_set_get" id="%@$BU*u]`c4)BS7=sg4E">
+                                <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="image_block"></mutation>
+                                <field name="COMPONENT_SELECTOR">image_block</field>
+                                <field name="PROP">Visible</field>
+                                <value name="VALUE">
+                                  <block type="logic_false" id="zSKz4|Tib$T9Sz+7U^];">
+                                    <field name="BOOL">TRUE</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="component_set_get" id="}PDWUfV]BmFk@^@@3^|u">
+                                    <mutation component_type="Image" set_or_get="set" property_name="Picture" is_generic="false" instance_name="Image1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">Image1</field>
+                                    <field name="PROP">Picture</field>
+                                    <value name="VALUE">
+                                      <block type="component_method" id="(Rx3_R,X6aVMT3)4:4s~">
+                                        <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                        <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                        <value name="ARG0">
+                                          <block type="text" id=";s3_)g7?):O=ff4m,wW{">
+                                            <field name="TEXT">photo_upd</field>
+                                          </block>
+                                        </value>
+                                        <value name="ARG1">
+                                          <block type="text" id="0P:aPEIb2RQ,Wu15TID+">
+                                            <field name="TEXT"></field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="component_set_get" id="7z.98`iT:[O_;9a_3R#j">
+                                        <mutation component_type="MakeroidFab" set_or_get="set" property_name="IconColor" is_generic="false" instance_name="ab_validate"></mutation>
+                                        <field name="COMPONENT_SELECTOR">ab_validate</field>
+                                        <field name="PROP">IconColor</field>
+                                        <value name="VALUE">
+                                          <block type="color_make_color" id="9)#;424mt_P6[iW)*kX`">
+                                            <value name="COLORLIST">
+                                              <block type="lists_create_with" id="j1Ls_qA8TZyb]+/HYsJ[" inline="false">
+                                                <mutation items="3"></mutation>
+                                                <value name="ADD0">
+                                                  <block type="math_number" id="*oBz/S^v]4)gv^T=YAU:">
+                                                    <field name="NUM">68</field>
+                                                  </block>
+                                                </value>
+                                                <value name="ADD1">
+                                                  <block type="math_number" id="gS/0{zwrtpMvpK%Le)j5">
+                                                    <field name="NUM">68</field>
+                                                  </block>
+                                                </value>
+                                                <value name="ADD2">
+                                                  <block type="math_number" id=".tF@1Z)].J_ZgH7y0tnJ">
+                                                    <field name="NUM">68</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="lexical_variable_set" id="3|:5R:(H@Rip~))+vtjy">
+                                            <field name="VAR">global validateenabled</field>
+                                            <value name="VALUE">
+                                              <block type="logic_boolean" id="?U%#54G!0[BO]s)l`/4*">
+                                                <field name="BOOL">TRUE</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="component_method" id="C?~?^ie86N*bI+BycA/;">
+                                                <mutation component_type="MakeroidFab" method_name="Show" is_generic="false" instance_name="ab_rotate"></mutation>
+                                                <field name="COMPONENT_SELECTOR">ab_rotate</field>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="controls_if" id="s3eEX!!6.M]=,_$`Q$Jq">
+                            <mutation else="1"></mutation>
+                            <value name="IF0">
+                              <block type="text_compare" id="NG1qu#GRSz(rYwlhvxSB">
+                                <field name="OP">EQUAL</field>
+                                <value name="TEXT1">
+                                  <block type="lists_lookup_in_pairs" id="PdICZ-tP`Kc#+M{Z[o_Y">
+                                    <value name="KEY">
+                                      <block type="text" id="+=XXW^qEbon]9pE)K]rS">
+                                        <field name="TEXT">imagetype</field>
+                                      </block>
+                                    </value>
+                                    <value name="LIST">
+                                      <block type="controls_getStartValue" id="yi=qcU{jnopdsY)FN1YZ"></block>
+                                    </value>
+                                    <value name="NOTFOUND">
+                                      <block type="text" id="R4=,mP!~iOy}r:(f~e9i">
+                                        <field name="TEXT">obs</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <value name="TEXT2">
+                                  <block type="text" id="/Fr|0E2rwHa!m[|[;h}i">
+                                    <field name="TEXT">resolution</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="component_set_get" id="]V*bt~[,=cF%yj~*A-_U">
+                                <mutation component_type="Form" set_or_get="set" property_name="Title" is_generic="false" instance_name="photo"></mutation>
+                                <field name="COMPONENT_SELECTOR">photo</field>
+                                <field name="PROP">Title</field>
+                                <value name="VALUE">
+                                  <block type="text" id="K=$Y3jomGnXy*al(O6Bl">
+                                    <field name="TEXT">Ajout d'une résolution</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <statement name="ELSE">
+                              <block type="component_set_get" id="fD6hA^U7o3N{U=n~(*7A">
+                                <mutation component_type="Form" set_or_get="set" property_name="Title" is_generic="false" instance_name="photo"></mutation>
+                                <field name="COMPONENT_SELECTOR">photo</field>
+                                <field name="PROP">Title</field>
+                                <value name="VALUE">
+                                  <block type="text" id="(q=Id]]pLScJm@beOC9,">
+                                    <field name="TEXT">Ajout d'une observation</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="component_set_get" id="_q7Sy#:XAZKQ+ZDPHK^8">
+                                <mutation component_type="Form" set_or_get="set" property_name="AboutScreen" is_generic="false" instance_name="photo"></mutation>
+                                <field name="COMPONENT_SELECTOR">photo</field>
+                                <field name="PROP">AboutScreen</field>
+                                <value name="VALUE">
+                                  <block type="component_method" id=";b@RKf:.ak?Zq3s%HQyx">
+                                    <mutation component_type="TinyDB" method_name="GetValue" is_generic="false" instance_name="TinyDB1"></mutation>
+                                    <field name="COMPONENT_SELECTOR">TinyDB1</field>
+                                    <value name="ARG0">
+                                      <block type="text" id="w_NQ29{cWe]U[h9UwZ{c">
+                                        <field name="TEXT">about</field>
+                                      </block>
+                                    </value>
+                                    <value name="ARG1">
+                                      <block type="text" id="ZIBdck}%vduDT4P(zFbp">
+                                        <field name="TEXT"></field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="component_set_get" id="ClOP[L%6toO92k6P9Xg0">
+                                    <mutation component_type="Form" set_or_get="set" property_name="AboutScreenTitle" is_generic="false" instance_name="photo"></mutation>
+                                    <field name="COMPONENT_SELECTOR">photo</field>
+                                    <field name="PROP">AboutScreenTitle</field>
+                                    <value name="VALUE">
+                                      <block type="text" id="kTj4R`j?XKx6}+Uo)X*)">
+                                        <field name="TEXT">A propos</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="^FcSe9st|B#Uj5X$~{*f" x="10" y="5970">
+    <mutation>
+      <arg name="filename"></arg>
+    </mutation>
+    <field name="NAME">creattmpimage</field>
+    <field name="VAR0">filename</field>
+    <statement name="STACK">
+      <block type="component_method" id="KuVj0v0SWLC0G^s#%L|/">
+        <mutation component_type="FileTools" method_name="CopyFileAsync" is_generic="false" instance_name="FileTools1"></mutation>
+        <field name="COMPONENT_SELECTOR">FileTools1</field>
+        <value name="ARG0">
+          <block type="lexical_variable_get" id="mF{M6ax9Z6KHR.a(=X,l">
+            <field name="VAR">filename</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block type="lexical_variable_get" id="GY^8ZaDg-=z-YPYlLEjL">
+            <field name="VAR">global tmppic</field>
+          </block>
+        </value>
+        <next>
+          <block type="component_method" id="siGEaQ7}5R$Hny2p$8v~">
+            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text" id="BpWnIdl43[+X{|+:3EJ[">
+                <field name="TEXT">Cliquez sur l'image pour passer en mode édition</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="mr)C?Q~~D;yv#]^!Dzdm" x="10" y="6170">
+    <mutation component_type="TaifunImage" is_generic="false" instance_name="TaifunImage1" event_name="Rotated"></mutation>
+    <field name="COMPONENT_SELECTOR">TaifunImage1</field>
+    <statement name="DO">
+      <block type="procedures_callnoreturn" id="6y7QmSE2l[-%60CROV6B" inline="false">
+        <mutation name="prepareimage"></mutation>
+        <field name="PROCNAME">prepareimage</field>
+      </block>
+    </statement>
+  </block>
+  <block type="component_event" id="J5JHQ[FH$}^yIH{O.s}e" x="10" y="6290">
+    <mutation component_type="Button" is_generic="false" instance_name="takepicture" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">takepicture</field>
+    <statement name="DO">
+      <block type="component_method" id="fyi;sA7+`/fN.Cou/m)8">
+        <mutation component_type="Camera" method_name="TakePicture" is_generic="false" instance_name="Camera1"></mutation>
+        <field name="COMPONENT_SELECTOR">Camera1</field>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="242" language-version="34"></yacodeblocks>
+</xml>
